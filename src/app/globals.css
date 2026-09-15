@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-body), ui-sans-serif, system-ui,
+    sans-serif;
+
+  /* Warm cream backgrounds */
+  --color-cream-50: #fffdf8;
+  --color-cream-100: #fbf6ec;
+  --color-cream-200: #f3ebda;
+  --color-cream-300: #e8dcc6;
+
+  /* Calm teal / blue brand core */
+  --color-teal-50: #eff7f8;
+  --color-teal-100: #d8ecef;
+  --color-teal-200: #b4dae1;
+  --color-teal-300: #85c2cd;
+  --color-teal-400: #4e9fad;
+  --color-teal-500: #2f818f;
+  --color-teal-600: #1f6672;
+  --color-teal-700: #17515c;
+  --color-teal-800: #123f48;
+  --color-teal-900: #0e3037;
+
+  /* Warm apricot accent */
+  --color-apricot-100: #fdeedd;
+  --color-apricot-200: #fadcba;
+  --color-apricot-300: #f6c188;
+  --color-apricot-400: #efa45c;
+  --color-apricot-500: #d97f2c;
+  --color-apricot-600: #a95c17;
+
+  --color-ink: #142b30;
+  --color-ink-muted: #47656b;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.75rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream-50);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-teal-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
