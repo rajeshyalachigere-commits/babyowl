@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
-import { Container, Section, SectionHeading } from "@/components/primitives";
+import {
+  AccentText,
+  Container,
+  Section,
+  SectionHeading,
+} from "@/components/primitives";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { CriteriaColumns } from "@/components/sections/CriteriaColumns";
 import { PageHero } from "@/components/sections/PageHero";
@@ -19,6 +24,7 @@ export default function CriteriaPage() {
       <PageHero
         eyebrow={criteriaIntro.eyebrow}
         title={criteriaIntro.headline}
+        accent={criteriaIntro.headlineAccent}
         lead={criteriaIntro.paragraphs[0]}
       />
 
@@ -29,6 +35,7 @@ export default function CriteriaPage() {
               headingId="criteria-heading"
               eyebrow="A fit looks like this"
               title="Three tests, applied honestly."
+              accent="applied honestly."
             >
               <p>{criteriaIntro.paragraphs[1]}</p>
             </SectionHeading>
@@ -48,7 +55,10 @@ export default function CriteriaPage() {
                 id="anti-heading"
                 className="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] leading-[1.12]"
               >
-                {antiCriteria.headline}
+                <AccentText
+                  text={antiCriteria.headline}
+                  accent={antiCriteria.headlineAccent}
+                />
               </h2>
               <div className="mt-7 editorial">
                 <p>
@@ -81,6 +91,7 @@ export default function CriteriaPage() {
               headingId="structure-heading"
               eyebrow="Structure"
               title="How transactions usually come together."
+              accent="come together."
             />
           </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-12">
@@ -101,9 +112,9 @@ export default function CriteriaPage() {
               <Reveal
                 key={item.title}
                 delay={index * 90}
-                className="border-t border-sand pt-7"
               >
-                <h3 className="text-2xl leading-snug">{item.title}</h3>
+                <div aria-hidden className="h-px w-14 bg-brass" />
+                <h3 className="mt-7 text-2xl leading-snug">{item.title}</h3>
                 <p className="mt-4 leading-relaxed text-graphite">
                   {item.body}
                 </p>
@@ -116,6 +127,7 @@ export default function CriteriaPage() {
       <ContactCta
         eyebrow="Not sure you fit?"
         headline="Send it anyway. We will tell you straight."
+        accent="We will tell you straight."
         body="If the business sits outside the ranges above but you think it is exceptional, we would still rather see it than miss it."
       />
     </>

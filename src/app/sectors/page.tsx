@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
-import { Container, Section, SectionHeading } from "@/components/primitives";
+import {
+  AccentText,
+  Container,
+  Section,
+  SectionHeading,
+} from "@/components/primitives";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { PageHero } from "@/components/sections/PageHero";
 import { SectorList } from "@/components/sections/SectorList";
@@ -19,6 +24,7 @@ export default function SectorsPage() {
       <PageHero
         eyebrow={sectorsIntro.eyebrow}
         title={sectorsIntro.headline}
+        accent={sectorsIntro.headlineAccent}
         lead={sectorsIntro.paragraphs[0]}
       />
 
@@ -29,6 +35,7 @@ export default function SectorsPage() {
               headingId="sectors-heading"
               eyebrow="Four areas"
               title="Deep, not wide."
+              accent="not wide."
             >
               <p>{sectorsIntro.paragraphs[1]}</p>
             </SectionHeading>
@@ -48,7 +55,10 @@ export default function SectorsPage() {
                 id="lens-heading"
                 className="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] leading-[1.12]"
               >
-                We are buying the same business four different ways.
+                <AccentText
+                  text="We are buying the same business four different ways."
+                  accent="four different ways."
+                />
               </h2>
             </Reveal>
             <Reveal delay={120} className="editorial">
@@ -72,6 +82,7 @@ export default function SectorsPage() {
       <ContactCta
         eyebrow="In one of these markets?"
         headline="We would like to hear from you early."
+        accent="early."
         body="Even years ahead of a transaction, a conversation with someone who knows your market is rarely wasted time."
       />
     </>

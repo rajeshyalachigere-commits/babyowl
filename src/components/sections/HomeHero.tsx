@@ -1,5 +1,5 @@
 import { OwlMark } from "@/components/OwlMark";
-import { ActionLink, Container } from "@/components/primitives";
+import { AccentText, ActionLink, Container } from "@/components/primitives";
 import { hero } from "@/content/home";
 
 export function HomeHero() {
@@ -24,7 +24,7 @@ export function HomeHero() {
             {hero.eyebrow}
           </p>
           <h1 className="mt-8 text-[clamp(2.6rem,7.4vw,5.4rem)] leading-[1.02] tracking-[-0.02em]">
-            {hero.headline}
+            <AccentText text={hero.headline} accent={hero.headlineAccent} />
           </h1>
           <div aria-hidden className="mt-10 h-px w-24 bg-brass" />
           <p className="mt-10 max-w-2xl text-lg leading-relaxed text-ink-muted md:text-xl md:leading-relaxed">

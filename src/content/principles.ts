@@ -1,6 +1,7 @@
 export const approachIntro = {
   eyebrow: "Approach",
   headline: "How we behave, written down.",
+  headlineAccent: "written down.",
   paragraphs: [
     "Every firm says it is different. The only useful test is what a firm does in the months after the wire clears — when the diligence questions are answered, the lawyers have gone home, and someone has to decide whether to keep the plant in a town that a spreadsheet says is inconvenient.",
     "These are the principles we operate by. They are deliberately short, because we intend to be held to them.",
@@ -9,12 +10,12 @@ export const approachIntro = {
 
 export const principles = [
   {
-    title: "Capital is a commodity. Judgment is not.",
-    body: "Money is the least interesting thing we bring. We invest where we have operated, where we know which levers actually move, and where our presence changes the outcome rather than the cap table.",
+    title: "The money is the easy part.",
+    body: "Anyone can wire funds. We invest where we have operated, where we know which levers actually move, and where our presence changes the outcome rather than the cap table.",
   },
   {
-    title: "Decades, not quarters.",
-    body: "We are compounders. No artificial hold period, no forced exit to clear a fund vintage. Decisions get made on a twenty-year horizon, which changes almost every decision.",
+    title: "We are not on a clock.",
+    body: "No artificial hold period, no forced exit to clear a fund vintage. Every decision gets made on a twenty-year horizon, which changes almost all of them.",
   },
   {
     title: "A very high bar, held quietly.",
@@ -37,6 +38,7 @@ export const principles = [
 export const process = {
   eyebrow: "What working with us looks like",
   headline: "A short, honest process.",
+  headlineAccent: "honest",
   steps: [
     {
       title: "A conversation",
@@ -55,6 +57,12 @@ export const process = {
       body: "We fund, we close, and then we are still there — in the business, at the pace the business needs, for as long as it takes.",
     },
   ],
+} as const;
+
+export const quotesIntro = {
+  eyebrow: "Borrowed wisdom",
+  headline: "Ideas we keep returning to.",
+  headlineAccent: "keep returning to.",
 } as const;
 
 export const quotes = [

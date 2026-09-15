@@ -73,6 +73,31 @@ export function Section({
   );
 }
 
+/**
+ * Renders a headline with one phrase set in italic accent type. Falls back to
+ * plain text when `accent` is absent or is not a substring of `text`.
+ */
+export function AccentText({
+  text,
+  accent,
+}: {
+  text: string;
+  accent?: string;
+}) {
+  if (!accent) return <>{text}</>;
+
+  const at = text.indexOf(accent);
+  if (at === -1) return <>{text}</>;
+
+  return (
+    <>
+      {text.slice(0, at)}
+      <em className="accent">{accent}</em>
+      {text.slice(at + accent.length)}
+    </>
+  );
+}
+
 export function Eyebrow({
   children,
   className,
@@ -95,6 +120,7 @@ export function Rule({ className }: { className?: string }) {
 export function SectionHeading({
   eyebrow,
   title,
+  accent,
   align = "left",
   className,
   children,
@@ -102,6 +128,7 @@ export function SectionHeading({
 }: {
   eyebrow?: string;
   title: string;
+  accent?: string;
   align?: "left" | "center";
   className?: string;
   children?: ReactNode;
@@ -123,7 +150,7 @@ export function SectionHeading({
           eyebrow ? "mt-5" : "",
         )}
       >
-        {title}
+        <AccentText text={title} accent={accent} />
       </h2>
       {children ? <div className="mt-7 editorial">{children}</div> : null}
     </div>

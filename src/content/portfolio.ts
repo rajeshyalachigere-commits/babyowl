@@ -1,6 +1,7 @@
 export const portfolioIntro = {
   eyebrow: "Portfolio",
-  headline: "Companies we are proud to hold.",
+  headline: "Businesses we intend to own for a very long time.",
+  headlineAccent: "for a very long time.",
   paragraphs: [
     "We measure ourselves by whether these businesses are better run, better staffed and more durable than the day we bought them — not by how quickly we can sell them.",
   ],

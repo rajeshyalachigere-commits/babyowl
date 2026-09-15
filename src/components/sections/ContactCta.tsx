@@ -1,13 +1,15 @@
-import { ActionLink, Container } from "@/components/primitives";
+import { AccentText, ActionLink, Container } from "@/components/primitives";
 import { contact } from "@/content/site";
 
 export function ContactCta({
   eyebrow,
   headline,
+  accent,
   body,
 }: {
   eyebrow: string;
   headline: string;
+  accent?: string;
   body: string;
 }) {
   return (
@@ -21,7 +23,7 @@ export function ContactCta({
           <div>
             <p className="eyebrow text-brass">{eyebrow}</p>
             <h2 className="mt-6 max-w-2xl text-[clamp(2rem,4.6vw,3.25rem)] leading-[1.08]">
-              {headline}
+              <AccentText text={headline} accent={accent} />
             </h2>
             <p className="mt-8 max-w-xl leading-relaxed text-ink-muted">
               {body}

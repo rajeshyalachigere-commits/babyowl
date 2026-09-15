@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import {
+  AccentText,
   ActionLink,
   Container,
   Eyebrow,
@@ -16,7 +17,7 @@ import { QuoteList } from "@/components/sections/QuoteList";
 import { SectorList } from "@/components/sections/SectorList";
 import { criteriaIntro } from "@/content/criteria";
 import { closing, stats, thesis } from "@/content/home";
-import { approachIntro } from "@/content/principles";
+import { approachIntro, quotesIntro } from "@/content/principles";
 import { portfolioIntro } from "@/content/portfolio";
 import { sectorsIntro } from "@/content/sectors";
 import { site } from "@/content/site";
@@ -41,7 +42,10 @@ export default function HomePage() {
                 id="thesis-heading"
                 className="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] leading-[1.12]"
               >
-                {thesis.headline}
+                <AccentText
+                  text={thesis.headline}
+                  accent={thesis.headlineAccent}
+                />
               </h2>
               <div aria-hidden className="mt-9 h-px w-16 bg-brass" />
             </Reveal>
@@ -94,6 +98,7 @@ export default function HomePage() {
               headingId="principles-heading"
               eyebrow={approachIntro.eyebrow}
               title="Six principles we intend to be held to."
+              accent="to be held to."
             >
               <p>{approachIntro.paragraphs[1]}</p>
             </SectionHeading>
@@ -115,7 +120,8 @@ export default function HomePage() {
             <SectionHeading
               headingId="criteria-heading"
               eyebrow={criteriaIntro.eyebrow}
-              title="What we look for."
+              title="What a fit actually looks like."
+              accent="actually looks like."
             >
               <p>{criteriaIntro.paragraphs[0]}</p>
             </SectionHeading>
@@ -140,7 +146,10 @@ export default function HomePage() {
                 id="sectors-heading"
                 className="mt-6 text-3xl leading-[1.12] sm:text-4xl lg:text-[2.9rem]"
               >
-                Four markets we know from the inside.
+                <AccentText
+                  text="Four markets we know from the inside."
+                  accent="from the inside."
+                />
               </h2>
               <div className="mt-7 editorial">
                 <p>{sectorsIntro.paragraphs[0]}</p>
@@ -165,6 +174,7 @@ export default function HomePage() {
               headingId="portfolio-heading"
               eyebrow={portfolioIntro.eyebrow}
               title={portfolioIntro.headline}
+              accent={portfolioIntro.headlineAccent}
             >
               <p>{portfolioIntro.paragraphs[0]}</p>
             </SectionHeading>
@@ -189,8 +199,9 @@ export default function HomePage() {
             <SectionHeading
               headingId="quotes-heading"
               align="center"
-              eyebrow="Borrowed wisdom"
-              title="A few favourites about business, and life."
+              eyebrow={quotesIntro.eyebrow}
+              title={quotesIntro.headline}
+              accent={quotesIntro.headlineAccent}
             />
           </Reveal>
           <div className="mt-14">
@@ -202,6 +213,7 @@ export default function HomePage() {
       <ContactCta
         eyebrow={closing.eyebrow}
         headline={closing.headline}
+        accent={closing.headlineAccent}
         body={closing.body}
       />
     </>

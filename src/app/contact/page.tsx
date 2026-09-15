@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { InquiryForm } from "@/components/InquiryForm";
 import { Reveal } from "@/components/Reveal";
-import { Container, Section } from "@/components/primitives";
+import { AccentText, Container, Section } from "@/components/primitives";
 import { PageHero } from "@/components/sections/PageHero";
 import { contact, footer } from "@/content/site";
 
@@ -18,6 +18,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Tell us about the business you built."
+        accent="you built."
         lead="Confidential, no materials required, and no obligation to run a process. If we are not the right partner we will say so quickly."
       />
 
@@ -26,7 +27,10 @@ export default function ContactPage() {
           <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
             <Reveal>
               <h2 className="text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.14]">
-                For owners, founders and their advisers.
+                <AccentText
+                  text="For owners, founders and their advisers."
+                  accent="and their advisers."
+                />
               </h2>
               <div aria-hidden className="mt-8 h-px w-16 bg-brass" />
               <p className="mt-8 leading-relaxed text-graphite">

@@ -6,9 +6,8 @@ export function CriteriaColumns() {
     <div className="grid gap-12 md:grid-cols-3 md:gap-10 lg:gap-14">
       {criteriaGroups.map((group, index) => (
         <Reveal key={group.label} delay={index * 100}>
-          <h3 className="border-t border-sand pt-7 text-[1.6rem] leading-snug">
-            {group.label}
-          </h3>
+          <div aria-hidden className="h-px w-14 bg-brass" />
+          <h3 className="mt-7 text-[1.6rem] leading-snug">{group.label}</h3>
           <ul className="mt-6 space-y-4">
             {group.items.map((item) => (
               <li key={item} className="flex gap-4">

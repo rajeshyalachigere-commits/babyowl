@@ -73,6 +73,16 @@
     text-transform: uppercase;
   }
 
+  /* Accented phrase inside a headline: italic serif in the brass accent. */
+  .accent {
+    color: var(--color-brass-deep);
+    font-style: italic;
+  }
+
+  .on-ink .accent {
+    color: var(--color-brass);
+  }
+
   /* Long-form editorial body copy. */
   .editorial > p {
     font-size: 1.0625rem;

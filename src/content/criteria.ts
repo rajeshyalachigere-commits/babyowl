@@ -1,6 +1,7 @@
 export const criteriaIntro = {
   eyebrow: "Investment criteria",
-  headline: "What we look for, and what we don't.",
+  headline: "The businesses we buy, and the ones we pass on.",
+  headlineAccent: "the ones we pass on.",
   paragraphs: [
     "We are specific on purpose. A narrow mandate means we can give a clear answer fast, which is worth more to a busy owner than a polite maybe.",
     "Treat the ranges below as a starting point rather than a gate. If a business is genuinely exceptional and sits just outside them, we would still like to hear about it.",
@@ -47,6 +48,7 @@ export const criteriaGroups = [
 export const antiCriteria = {
   eyebrow: "Not a fit",
   headline: "Where we are the wrong buyer.",
+  headlineAccent: "the wrong buyer.",
   items: [
     "Pre-revenue businesses, venture rounds, and minority growth equity",
     "Turnarounds, restructurings, and businesses in active distress",

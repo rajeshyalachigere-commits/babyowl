@@ -1,13 +1,15 @@
 import { OwlMark } from "@/components/OwlMark";
-import { Container } from "@/components/primitives";
+import { AccentText, Container } from "@/components/primitives";
 
 export function PageHero({
   eyebrow,
   title,
+  accent,
   lead,
 }: {
   eyebrow: string;
   title: string;
+  accent?: string;
   lead?: string;
 }) {
   return (
@@ -23,7 +25,7 @@ export function PageHero({
       <Container width="wide" className="pt-36 pb-20 md:pt-48 md:pb-28">
         <p className="eyebrow text-brass">{eyebrow}</p>
         <h1 className="mt-7 max-w-4xl text-[clamp(2.2rem,5.4vw,4rem)] leading-[1.06]">
-          {title}
+          <AccentText text={title} accent={accent} />
         </h1>
         {lead ? (
           <p className="mt-9 max-w-2xl text-lg leading-relaxed text-ink-muted">

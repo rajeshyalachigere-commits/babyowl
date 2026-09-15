@@ -19,6 +19,7 @@ export default function PortfolioPage() {
       <PageHero
         eyebrow={portfolioIntro.eyebrow}
         title={portfolioIntro.headline}
+        accent={portfolioIntro.headlineAccent}
         lead={portfolioIntro.paragraphs[0]}
       />
 
@@ -29,6 +30,7 @@ export default function PortfolioPage() {
               headingId="portfolio-heading"
               eyebrow="Holdings"
               title="Built to be owned, not flipped."
+              accent="not flipped."
             >
               <p>
                 Each of these businesses came from an owner who had a choice. We
@@ -53,6 +55,7 @@ export default function PortfolioPage() {
       <ContactCta
         eyebrow="Add your company"
         headline="The next one could be yours."
+        accent="could be yours."
         body="We acquire a small number of businesses each year. If yours fits the profile above, we would welcome a confidential conversation."
       />
     </>

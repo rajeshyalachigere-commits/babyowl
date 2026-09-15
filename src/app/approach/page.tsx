@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import {
+  AccentText,
   Container,
   Section,
   SectionHeading,
@@ -9,7 +10,7 @@ import { ContactCta } from "@/components/sections/ContactCta";
 import { PageHero } from "@/components/sections/PageHero";
 import { PrinciplesGrid } from "@/components/sections/PrinciplesGrid";
 import { QuoteList } from "@/components/sections/QuoteList";
-import { approachIntro, process } from "@/content/principles";
+import { approachIntro, process, quotesIntro } from "@/content/principles";
 
 export const metadata: Metadata = {
   title: "Approach",
@@ -24,6 +25,7 @@ export default function ApproachPage() {
       <PageHero
         eyebrow={approachIntro.eyebrow}
         title={approachIntro.headline}
+        accent={approachIntro.headlineAccent}
         lead={approachIntro.paragraphs[0]}
       />
 
@@ -34,6 +36,7 @@ export default function ApproachPage() {
               headingId="principles-heading"
               eyebrow="Principles"
               title="Six things we will not trade away."
+              accent="not trade away."
             >
               <p>{approachIntro.paragraphs[1]}</p>
             </SectionHeading>
@@ -53,7 +56,10 @@ export default function ApproachPage() {
                 id="process-heading"
                 className="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] leading-[1.12]"
               >
-                {process.headline}
+                <AccentText
+                  text={process.headline}
+                  accent={process.headlineAccent}
+                />
               </h2>
               <div aria-hidden className="mt-9 h-px w-16 bg-brass" />
               <p className="mt-9 max-w-sm leading-relaxed text-graphite">
@@ -93,12 +99,15 @@ export default function ApproachPage() {
         <Container width="wide">
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
-              <p className="eyebrow text-brass">Borrowed wisdom</p>
+              <p className="eyebrow text-brass">{quotesIntro.eyebrow}</p>
               <h2
                 id="quotes-heading"
                 className="mt-6 text-3xl leading-[1.12] sm:text-4xl lg:text-[2.9rem]"
               >
-                A few favourites about business, and life.
+                <AccentText
+                  text={quotesIntro.headline}
+                  accent={quotesIntro.headlineAccent}
+                />
               </h2>
             </div>
           </Reveal>
@@ -111,6 +120,7 @@ export default function ApproachPage() {
       <ContactCta
         eyebrow="Next step"
         headline="One conversation, no materials required."
+        accent="no materials required."
         body="If any of the above sounds like the partner you have been looking for, we would like to hear about the business you built."
       />
     </>

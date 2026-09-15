@@ -1,6 +1,7 @@
 export const sectorsIntro = {
   eyebrow: "Focus sectors",
   headline: "Where our experience is worth something.",
+  headlineAccent: "worth something.",
   paragraphs: [
     "We concentrate where we have operated. In each of these markets we have run a business, fixed a business, or spent enough years around one to know which problems are real and which are noise.",
     "Outside these four areas we are usually the wrong owner, and we will say so early.",
