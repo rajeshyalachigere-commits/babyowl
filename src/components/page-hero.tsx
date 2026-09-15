@@ -16,7 +16,7 @@ export function PageHero({
   return (
     <section className="relative overflow-hidden border-b border-teal-100 bg-gradient-to-b from-teal-50 to-cream-50">
       <OwlMark
-        className="pointer-events-none absolute -top-10 right-[-3rem] h-64 w-64 text-teal-700/5"
+        className="pointer-events-none absolute -top-12 right-[-4rem] hidden h-64 w-64 text-teal-800 opacity-[0.07] sm:block"
         aria-hidden
       />
       <Container className="relative py-14 sm:py-20">

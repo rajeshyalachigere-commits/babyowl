@@ -162,6 +162,8 @@ export default function AboutPage() {
               <Card className="h-full">
                 <PhotoPlaceholder
                   label="Photo: staff headshot"
+                  shape="circle"
+                  compact
                   className="mb-6 aspect-square w-24"
                 />
                 <h3 className="text-xl font-bold text-teal-900">

@@ -145,6 +145,12 @@ export function Button({
 
 /* ------------------------------------------------------------- decorative */
 
+const shapeClasses = {
+  rounded: "rounded-4xl",
+  arch: "rounded-t-[999px] rounded-b-4xl",
+  circle: "rounded-full",
+} as const;
+
 /**
  * Stand-in for photography. Swap these for real <Image /> photos of your
  * space and (with written permission) the children in your care.
@@ -152,26 +158,41 @@ export function Button({
 export function PhotoPlaceholder({
   label,
   shape = "rounded",
+  /** Hides the caption chip on small panels where it would not fit. */
+  compact = false,
   className = "",
 }: {
   label: string;
-  shape?: "rounded" | "arch";
+  shape?: "rounded" | "arch" | "circle";
+  compact?: boolean;
   className?: string;
 }) {
   return (
     <div
-      className={`relative flex items-end overflow-hidden border border-teal-100 bg-gradient-to-br from-teal-100 via-cream-100 to-apricot-100 ${
-        shape === "arch"
-          ? "rounded-t-[999px] rounded-b-4xl"
-          : "rounded-4xl"
+      className={`relative overflow-hidden border border-teal-200 bg-gradient-to-br from-teal-200 via-cream-200 to-apricot-200 ${
+        shapeClasses[shape]
       } ${className}`}
     >
       <div
         aria-hidden
-        className="absolute -top-6 -right-4 h-40 w-40 rounded-full bg-white/40 blur-2xl"
+        className="absolute -top-8 -right-6 h-44 w-44 rounded-full bg-white/45 blur-2xl"
       />
-      <OwlMark className="absolute top-1/2 left-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 text-teal-700/15" />
-      <p className="relative m-4 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-teal-800">
+      <div
+        aria-hidden
+        className="absolute -bottom-10 -left-8 h-40 w-40 rounded-full bg-teal-300/35 blur-2xl"
+      />
+      <OwlMark
+        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-teal-700 opacity-25 ${
+          shape === "circle" ? "h-9 w-9" : "h-24 w-24"
+        }`}
+      />
+      <p
+        className={
+          compact
+            ? "sr-only"
+            : "absolute right-4 bottom-4 max-w-[calc(100%-2rem)] rounded-full border border-teal-100 bg-white/85 px-3 py-1 text-xs font-medium text-teal-800"
+        }
+      >
         {label}
       </p>
     </div>

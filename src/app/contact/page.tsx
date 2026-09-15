@@ -33,7 +33,7 @@ export default function ContactPage() {
       />
 
       <Section>
-        <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
           <InquiryForm />
 
           <div className="space-y-6">

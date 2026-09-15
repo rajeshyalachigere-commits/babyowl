@@ -125,6 +125,8 @@ export default function HomePage() {
               <PhotoPlaceholder
                 label="Photo: your bright main play room"
                 shape="arch"
+                /* Caption is hidden here: the floating note card sits on top of it. */
+                compact
                 className="aspect-4/5 w-full max-w-md lg:ml-auto"
               />
               <Card className="absolute -bottom-6 left-0 w-64 p-5 sm:left-6 lg:-left-6">

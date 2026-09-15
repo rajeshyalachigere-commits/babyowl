@@ -14,7 +14,7 @@ export function CtaBand({
       <Container>
         <div className="relative overflow-hidden rounded-5xl bg-teal-800 px-7 py-12 text-cream-50 sm:px-12 sm:py-14">
           <OwlMark
-            className="pointer-events-none absolute -top-8 -right-6 h-56 w-56 text-cream-100/10"
+            className="pointer-events-none absolute -top-8 -right-6 h-56 w-56 text-cream-100 opacity-10"
             aria-hidden
           />
           <div className="relative max-w-2xl">
