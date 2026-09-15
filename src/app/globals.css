@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  /* Institutional palette: deep navy-charcoal, warm cream, single brass accent. */
+  --color-ink: #101720;
+  --color-ink-soft: #18212e;
+  --color-ink-line: #27323f;
+  --color-ink-muted: #a7b0bd;
+
+  --color-cream: #f7f4ed;
+  --color-cream-deep: #efeae0;
+  --color-sand: #dcd5c6;
+  --color-graphite: #545d6b;
+
+  --color-brass: #a8834f;
+  --color-brass-deep: #7c5b2d;
+
+  --tracking-label: 0.2em;
+}
+
+@theme inline {
+  --font-display: var(--font-brand-display), Georgia, "Times New Roman", serif;
+  --font-sans:
+    var(--font-brand-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-brand-sans), ui-sans-serif, system-ui, sans-serif;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-brand-display), Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-brass);
+    color: var(--color-cream);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Small tracked-out uppercase label used above every section heading. */
+  .eyebrow {
+    font-family: var(--font-brand-sans), ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+  }
+
+  /* Long-form editorial body copy. */
+  .editorial > p {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-graphite);
+  }
+
+  .editorial > p + p {
+    margin-top: 1.5rem;
+  }
+
+  @media (width >= 48rem) {
+    .editorial > p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+    }
+  }
+
+  .on-ink .editorial > p {
+    color: var(--color-ink-muted);
+  }
+}
+
+@layer utilities {
+  /* Scroll reveal, applied by the Reveal component. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition:
+      opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
