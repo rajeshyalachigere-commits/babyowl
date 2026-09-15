@@ -15,12 +15,14 @@ export function HomeHero() {
       />
       <OwlMark
         aria-hidden
-        className="pointer-events-none absolute -right-16 -bottom-10 -z-10 h-[26rem] w-[26rem] text-brass/8 sm:h-[34rem] sm:w-[34rem] md:-right-24 md:h-[42rem] md:w-[42rem]"
+        className="pointer-events-none absolute -right-24 -bottom-24 -z-10 h-[22rem] w-[22rem] text-brass/5 sm:-right-16 sm:-bottom-10 sm:h-[34rem] sm:w-[34rem] sm:text-brass/8 md:-right-24 md:h-[42rem] md:w-[42rem]"
       />
 
       <Container width="wide" className="pt-36 pb-20 md:pt-44 md:pb-28">
         <div className="max-w-4xl">
-          <p className="eyebrow text-brass">{hero.eyebrow}</p>
+          <p className="eyebrow text-[0.625rem] tracking-[0.15em] text-brass sm:text-[0.6875rem] sm:tracking-[0.2em]">
+            {hero.eyebrow}
+          </p>
           <h1 className="mt-8 text-[clamp(2.6rem,7.4vw,5.4rem)] leading-[1.02] tracking-[-0.02em]">
             {hero.headline}
           </h1>

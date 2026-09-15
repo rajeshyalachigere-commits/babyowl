@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { OwlMark } from "@/components/OwlMark";
-import { navigation, site } from "@/content/site";
+import { contact, navigation, site } from "@/content/site";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -44,7 +44,7 @@ export function SiteHeader() {
       <div
         className={[
           "mx-auto flex w-full max-w-7xl items-center justify-between px-6 transition-all duration-500 sm:px-8 lg:px-12",
-          scrolled ? "h-16 md:h-18" : "h-20 md:h-24",
+          scrolled || menuOpen ? "h-16 md:h-18" : "h-20 md:h-24",
         ].join(" ")}
       >
         <Link
@@ -114,7 +114,7 @@ export function SiteHeader() {
       <div
         id="mobile-menu"
         hidden={!menuOpen}
-        className="border-t border-ink-line bg-ink md:hidden"
+        className="h-[calc(100svh-4rem)] overflow-y-auto border-t border-ink-line bg-ink md:hidden"
       >
         <nav aria-label="Primary — mobile" className="px-6 py-4">
           <ul>
@@ -134,6 +134,19 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-12 pb-10">
+            <p className="eyebrow text-brass">Inquiries</p>
+            <a
+              href={`mailto:${contact.email}`}
+              className="mt-4 block font-display text-lg text-cream"
+            >
+              {contact.email}
+            </a>
+            <p className="mt-2 font-display text-lg text-ink-muted">
+              {contact.phone}
+            </p>
+          </div>
         </nav>
       </div>
     </header>
