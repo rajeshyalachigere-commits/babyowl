@@ -1,93 +1,61 @@
-/** Reusable marketing copy for the home and about pages. */
+export const hero = {
+  eyebrow: "Private Investment · Lower Middle Market",
+  headline: "Owners first. Capital second.",
+  /** Rendered in italic accent type inside the headline. Must be a substring of it. */
+  headlineAccent: "Capital second.",
+  subhead:
+    "Long-term capital partnership for values-driven, entrepreneur-owned businesses — from people who have run them, not just funded them.",
+  primaryCta: { href: "/contact", label: "Start a conversation" },
+  secondaryCta: { href: "/approach", label: "How we partner" },
+} as const;
 
-export const trustSignals = [
-  { label: "Licensed & insured", detail: "State license [State license #]" },
-  { label: "CPR & first-aid certified", detail: "Every teacher, renewed yearly" },
-  { label: "Low ratios", detail: "Small groups, familiar faces" },
-  { label: "Secure entry", detail: "Keypad door and signed pickups only" },
-];
-
-export const values = [
-  {
-    title: "Gentle, responsive care",
-    body: "We follow your child's cues before the clock. Crying is answered, curiosity is followed, and every goodbye is handled with patience.",
-  },
-  {
-    title: "Small groups, steady faces",
-    body: "Children stay with the same teachers as long as we can manage it, because trust is built by the person who knows how you like to be held.",
-  },
-  {
-    title: "Play is the curriculum",
-    body: "Sand, water, blocks, paint, and stories are how young children learn to think. We plan around what they are already fascinated by.",
-  },
-  {
-    title: "Parents in the loop",
-    body: "Daily notes, photos, and honest conversations at pickup. You should never wonder how the day actually went.",
-  },
-];
-
-export const differentiators = [
-  {
-    title: "Daily updates you can actually read",
-    body: "Naps, meals, diapers, milestones, and a photo or two — sent before you leave work, not summarized a week later.",
-  },
-  {
-    title: "Food and rest done thoughtfully",
-    body: "Nutritious meals and snacks, allergy-aware kitchen practices, and nap routines matched to your child at home.",
-  },
-  {
-    title: "A calm, clean, safe space",
-    body: "Sanitized daily, childproofed constantly, with a fenced outdoor area and secure keypad entry.",
-  },
-];
-
-export const testimonials = [
-  {
+export const thesis = {
+  eyebrow: "Our thesis",
+  headline: "A patient owner, on the same side of the table as the builder.",
+  headlineAccent: "on the same side of the table",
+  /** Long-form narrative. Each string renders as its own paragraph. */
+  paragraphs: [
+    "Capital is not scarce. A profitable company in a fragmented market can find a willing buyer in a fortnight, at a price that would have been unthinkable a generation ago. That is a genuinely good dynamic for an owner thinking about a sale — right up to the moment the money arrives attached to someone who is certain they understand the business better than the person who spent twenty years building it.",
+    "Owners know how fragile the real assets are. The product that actually works. The customer who answers the phone because of a relationship earned over a decade. The crew that stayed through a hard year. None of it appears on a balance sheet, and all of it can be spent in a single quarter by an owner optimising for an exit that was scheduled before the ink dried.",
+    "BABYOWL was founded to be the other option. We are operators and investors who have sat in the seat — hiring, firing, missing a covenant, making payroll in a bad month. We buy a small number of entrepreneur-owned businesses from owners who care what happens next, and then we hold them.",
+    "We are not raising a fund with a five-year clock. We do not need a story for a fundraising deck. We need a handful of durable businesses, run well, compounding quietly for a very long time. If that sounds like your company — or a company you know — we would like to hear the story.",
+  ],
+  signature: {
     quote:
-      "We toured five places. BABYOWL was the only one where the room was calm and every teacher knew our daughter's name by the second visit.",
-    attribution: "[Parent name], parent of a toddler",
+      "The best outcome we can produce is a company that is stronger in twenty years than it is the day we buy it.",
+    attribution: "BABYOWL Partners",
   },
-  {
-    quote:
-      "The daily notes made going back to work bearable. I knew exactly how she slept and what made her laugh that day.",
-    attribution: "[Parent name], parent of an infant",
-  },
-  {
-    quote:
-      "Our son started kindergarten confident and curious. He still asks to visit his preschool teachers.",
-    attribution: "[Parent name], BABYOWL alum family",
-  },
-];
+} as const;
 
-export const faqs = [
+export const stats = [
   {
-    question: "What are your hours?",
-    answer:
-      "We are open [Open time] – [Close time], Monday through Friday, with early-drop and late-pickup options available for an added fee.",
+    // PLACEHOLDER: adjust to reflect the firm's actual mandate.
+    value: "Decades",
+    label: "Intended hold period",
+    detail: "We underwrite to permanence, not to a fund life.",
   },
   {
-    question: "How do waitlists and enrollment work?",
-    answer:
-      "Submit an inquiry and we will reply within [1–2 business days] with current openings by age group. Enrollment is confirmed with a signed agreement and a deposit that applies to your first week of tuition.",
+    // PLACEHOLDER: adjust to reflect the firm's actual pace.
+    value: "1–2",
+    label: "Acquisitions per year",
+    detail: "A high bar, and the time to honour it.",
   },
   {
-    question: "Are you licensed?",
-    answer:
-      "Yes. BABYOWL is licensed by [state agency] under license [State license #], and every teacher holds current CPR and first-aid certification with a completed background check.",
+    // PLACEHOLDER: adjust to reflect the firm's actual check size.
+    value: "$10–75M",
+    label: "Target revenue",
+    detail: "Profitable businesses in fragmented markets.",
   },
   {
-    question: "What should we pack each day?",
-    answer:
-      "A change of clothes, any bottles or formula, diapers or pull-ups, a comfort item for rest time, and weather-appropriate outerwear. We provide meals, snacks, and all art supplies.",
+    value: "100%",
+    label: "Of calls returned",
+    detail: "Including the ones where the answer is no.",
   },
-  {
-    question: "Can we visit before enrolling?",
-    answer:
-      "Please do. We offer tours [days/times] and encourage you to bring your child so you can see how the room feels together.",
-  },
-  {
-    question: "What is your sick-child policy?",
-    answer:
-      "Children stay home with a fever over [temperature], vomiting, or an unexplained rash, and may return [24 hours] after symptoms resolve without medication. Full details are in the family handbook.",
-  },
-];
+] as const;
+
+export const closing = {
+  eyebrow: "No noise",
+  headline: "Tell us about the business you built.",
+  headlineAccent: "you built.",
+  body: "Every conversation is confidential, and most of them do not lead to a transaction. We still want to have them. If the fit is not there, we will tell you quickly and, where we can, point you somewhere better.",
+} as const;

@@ -1,72 +1,87 @@
 import type { Metadata } from "next";
-import { Inter, Nunito } from "next/font/google";
-import "./globals.css";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+import { Inter, Newsreader } from "next/font/google";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import { StructuredData } from "@/components/StructuredData";
 import { site } from "@/content/site";
+import "./globals.css";
 
-const body = Inter({
+const sans = Inter({
   subsets: ["latin"],
-  variable: "--font-body",
   display: "swap",
+  variable: "--font-brand-sans",
 });
 
-const display = Nunito({
+const display = Newsreader({
   subsets: ["latin"],
-  variable: "--font-display",
   display: "swap",
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-brand-display",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: `${site.name} — ${site.tagline}`,
-    template: `%s · ${site.name}`,
+    template: `%s — ${site.name}`,
   },
-  description: site.shortDescription,
-  keywords: [
-    "childcare",
-    "daycare",
-    "infant care",
-    "toddler program",
-    "preschool",
-    "early learning",
-    site.name,
-  ],
+  description: site.description,
   applicationName: site.name,
+  keywords: [
+    "private equity",
+    "lower middle market",
+    "entrepreneur-owned business",
+    "long-term hold",
+    "business succession",
+    "majority recapitalisation",
+  ],
+  authors: [{ name: site.legalName }],
   openGraph: {
     type: "website",
     siteName: site.name,
     title: `${site.name} — ${site.tagline}`,
-    description: site.shortDescription,
+    description: site.description,
     url: site.url,
-    locale: "en_US",
+    locale: site.locale,
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.tagline}`,
-    description: site.shortDescription,
+    description: site.description,
   },
-  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${body.variable} ${display.variable}`}>
-      <body className="flex min-h-screen flex-col font-sans">
+    <html
+      lang="en"
+      className={`${sans.variable} ${display.variable} h-full antialiased`}
+    >
+      <body className="flex min-h-full flex-col bg-cream">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-teal-800 focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-cream-50"
+          className="eyebrow sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:bg-ink focus:px-5 focus:py-3 focus:text-cream"
         >
-          Skip to main content
+          Skip to content
         </a>
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}
         </main>
         <SiteFooter />
+        <StructuredData />
       </body>
     </html>
   );

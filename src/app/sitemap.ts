@@ -1,14 +1,22 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
 
+const routes = [
+  { path: "/", priority: 1 },
+  { path: "/approach", priority: 0.8 },
+  { path: "/criteria", priority: 0.8 },
+  { path: "/sectors", priority: 0.8 },
+  { path: "/portfolio", priority: 0.7 },
+  { path: "/contact", priority: 0.6 },
+] as const;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return [
-    { url: site.url, lastModified, changeFrequency: "monthly", priority: 1 },
-    { url: `${site.url}/programs`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${site.url}/contact`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${site.url}/about`, lastModified, changeFrequency: "yearly", priority: 0.8 },
-    { url: `${site.url}/privacy`, lastModified, changeFrequency: "yearly", priority: 0.2 },
-  ];
+  return routes.map((route) => ({
+    url: new URL(route.path, site.url).toString(),
+    lastModified,
+    changeFrequency: "monthly",
+    priority: route.priority,
+  }));
 }

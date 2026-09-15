@@ -1,40 +1,49 @@
 /**
- * Single source of truth for business details.
+ * Global site, brand and contact content.
  *
- * Everything wrapped in [square brackets] is a placeholder that should be
- * replaced before the site goes live. See the checklist in README.md.
+ * Values wrapped in square brackets (e.g. "[Phone]") are intentional
+ * placeholders. See the "Placeholders checklist" section of README.md
+ * for everything that needs to be replaced before launch.
  */
+
 export const site = {
   name: "BABYOWL",
-  legalName: "BABYOWL Early Learning",
-  tagline: "Warm, watchful care from the very first day",
-  shortDescription:
-    "BABYOWL is a small, licensed childcare home for infants, toddlers, and preschoolers — built on gentle routines, low ratios, and daily updates for parents.",
-  /** Used for canonical URLs, sitemap, and Open Graph tags. */
+  legalName: "BABYOWL Partners",
+  tagline: "Patient capital for businesses built to last.",
+  description:
+    "BABYOWL is a private investment firm acquiring entrepreneur-owned businesses in the lower middle market. We are operators and investors who hold for decades, not quarters.",
+  // PLACEHOLDER: replace with the production domain before launch.
   url: "https://babyowl.example",
-  email: "hello@babyowl.example",
-  /** Placeholder — replace with the real number and add a matching tel: link. */
-  phone: "[Phone]",
-  address: {
-    street: "[Address]",
-    cityState: "[City, State ZIP]",
-  },
-  hours: [
-    { days: "Monday – Friday", time: "[Open time] – [Close time]" },
-    { days: "Saturday", time: "[Hours or “Closed”]" },
-    { days: "Sunday", time: "Closed" },
-  ],
-  /** Placeholder — replace with your state licensing number. */
-  licenseNumber: "[State license #]",
-  social: {
-    instagram: "https://instagram.com/", // [Replace with your profile]
-    facebook: "https://facebook.com/", // [Replace with your page]
-  },
+  locale: "en_US",
 } as const;
 
-export const nav = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/programs", label: "Programs" },
-  { href: "/contact", label: "Contact & Enroll" },
+export const contact = {
+  // PLACEHOLDER: replace with a real inbox.
+  email: "contact@babyowl.example",
+  // PLACEHOLDER: replace with a real phone number.
+  phone: "[Phone]",
+  // PLACEHOLDER: replace with the firm's headquarters city and state.
+  city: "[City]",
+  region: "[State]",
+  // PLACEHOLDER: replace with a real mailing address.
+  address: "[Street Address]",
+  responseTime: "We reply to every inquiry within two business days.",
+} as const;
+
+export const navigation = [
+  { href: "/approach", label: "Approach" },
+  { href: "/criteria", label: "Criteria" },
+  { href: "/sectors", label: "Sectors" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Contact" },
 ] as const;
+
+export const footer = {
+  statement:
+    "BABYOWL acquires and holds a small number of exceptional lower-middle-market businesses. We are not a fund with a clock on it.",
+  disclaimer:
+    "This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. Nothing herein should be construed as investment, legal, or tax advice.",
+  // Shown until the portfolio content is replaced with real holdings.
+  placeholderNotice:
+    "Portfolio entries shown on this site are illustrative placeholders, not completed transactions.",
+} as const;

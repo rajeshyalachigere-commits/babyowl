@@ -1,27 +1,40 @@
-import { ButtonLink, Container } from "@/components/ui";
-import { OwlMark } from "@/components/owl-mark";
-import { site } from "@/content/site";
+import { OwlMark } from "@/components/OwlMark";
+import { ActionLink, Container } from "@/components/primitives";
+
+export const metadata = {
+  title: "Page not found",
+};
 
 export default function NotFound() {
   return (
-    <Container className="py-24 text-center sm:py-32">
-      <OwlMark
-        className="mx-auto h-16 w-16 text-teal-700"
-        title={`${site.name} owl`}
+    <section className="on-ink relative isolate flex min-h-svh items-center overflow-hidden bg-ink text-cream">
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-[radial-gradient(110%_120%_at_78%_6%,#1c2634_0%,#101720_60%,#0b1017_100%)]"
       />
-      <h1 className="mt-8 text-4xl font-extrabold text-teal-900">
-        This page has wandered off
-      </h1>
-      <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed text-ink-muted">
-        The page you were looking for is not here. Let&apos;s get you back to
-        somewhere useful.
-      </p>
-      <div className="mt-8 flex flex-wrap justify-center gap-3">
-        <ButtonLink href="/">Back to home</ButtonLink>
-        <ButtonLink href="/contact" variant="secondary">
-          Contact us
-        </ButtonLink>
-      </div>
-    </Container>
+      <Container width="wide" className="py-32">
+        <OwlMark className="h-12 w-12 text-brass" />
+        <p className="eyebrow mt-10 text-brass">Error 404</p>
+        <h1 className="mt-6 max-w-2xl text-[clamp(2.2rem,5vw,3.6rem)] leading-[1.08]">
+          This page has been held for the long term. Elsewhere.
+        </h1>
+        <p className="mt-8 max-w-xl leading-relaxed text-ink-muted">
+          The address you followed does not exist. Everything about the firm,
+          our criteria and how to reach us is a click away.
+        </p>
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <ActionLink href="/" variant="outlineLight">
+            Back to home
+          </ActionLink>
+          <ActionLink
+            href="/contact"
+            variant="outlineLight"
+            className="border-transparent hover:border-transparent hover:bg-transparent hover:text-brass"
+          >
+            Contact us
+          </ActionLink>
+        </div>
+      </Container>
+    </section>
   );
 }

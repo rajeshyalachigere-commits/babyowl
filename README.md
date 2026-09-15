@@ -1,201 +1,191 @@
-# BABYOWL — childcare website
+# BABYOWL
 
-The marketing website for **BABYOWL**, a small licensed childcare home for
-infants, toddlers, and preschoolers.
+Marketing site for **BABYOWL**, a private investment firm that acquires and
+holds entrepreneur-owned businesses in the lower middle market.
 
-Four pages, all mobile-first: **Home**, **About**, **Programs**, and
-**Contact & Enroll** (plus a privacy notice and a friendly 404 page).
+The site is an editorial, institutional single-purpose brochure: a thesis-led
+home page, the firm's operating principles, published investment criteria,
+sector focus, portfolio, and a confidential inquiry form for owners and their
+advisers.
 
-Built with [Next.js](https://nextjs.org) (App Router), TypeScript, and
-[Tailwind CSS](https://tailwindcss.com). It deploys to
-[Vercel](https://vercel.com) for free.
+> **Status:** the copy, financial ranges, portfolio entries and contact details
+> shipped here are editable defaults and placeholders. Work through the
+> [placeholders checklist](#placeholders-checklist) before this goes live.
 
----
+## Stack
 
-## 1. Run the site on your computer
+| Concern    | Choice                                        |
+| ---------- | --------------------------------------------- |
+| Framework  | Next.js 16 (App Router, React 19, Turbopack)  |
+| Language   | TypeScript (strict)                           |
+| Styling    | Tailwind CSS v4 with a custom `@theme`         |
+| Typography | Newsreader (display) + Inter (UI), via `next/font` |
+| Hosting    | Any Node host or Vercel; fully static except the inquiry API route |
 
-You need [Node.js](https://nodejs.org) 20 or newer. Install it once, then in a
-terminal window inside this folder:
-
-```bash
-npm install       # download the site's building blocks (first time only)
-npm run dev       # start the site locally
-```
-
-Open <http://localhost:3000>. Edits you save appear in the browser instantly.
-Press `Ctrl + C` in the terminal to stop.
-
-Two other commands, handy before you publish:
+## Getting started
 
 ```bash
-npm run build     # make sure the site still builds with no errors
-npm run lint      # check the code for mistakes
+npm install
+npm run dev      # http://localhost:3000
 ```
 
----
+Other scripts:
 
-## 2. How to edit the words on the site
-
-**Almost all editable text lives in the `src/content/` folder.** You can change
-it in any text editor — no coding required. Keep the quotation marks and commas
-where they are, and only change the text *inside* the quotes.
-
-| I want to change… | Open this file |
-| --- | --- |
-| Business name, address, phone, email, hours, license number, social links | `src/content/site.ts` |
-| Age groups: names, ages, ratios, tuition, highlights, daily schedule | `src/content/programs.ts` |
-| Trust badges, values, "what families get", parent quotes, FAQs | `src/content/home.ts` |
-| Staff names, titles, and bios | `src/content/team.ts` |
-
-Text that only appears on one page lives in that page's file:
-
-| Page | File |
-| --- | --- |
-| Home | `src/app/page.tsx` |
-| About | `src/app/about/page.tsx` |
-| Programs (incl. daily rhythm + safety) | `src/app/programs/page.tsx` |
-| Contact & Enroll | `src/app/contact/page.tsx` |
-| Privacy notice | `src/app/privacy/page.tsx` |
-| Header / navigation links | `src/components/site-header.tsx` and `nav` in `src/content/site.ts` |
-| Footer | `src/components/site-footer.tsx` |
-
-### Adding real photos
-
-Every soft gradient panel with a faint owl is a **photo placeholder**. To use a
-real photo:
-
-1. Put the image file in the `public/` folder (for example
-   `public/play-room.jpg`).
-2. Find the matching `<PhotoPlaceholder label="Photo: …" />` line in the page
-   file and replace it with:
-
-```tsx
-import Image from "next/image";
-
-<Image
-  src="/play-room.jpg"
-  alt="Toddlers building with blocks in our main play room"
-  width={800}
-  height={600}
-  className="rounded-4xl w-full"
-/>
+```bash
+npm run build      # production build (must pass before merging)
+npm start          # serve the production build
+npm run lint       # eslint
+npm run typecheck  # tsc --noEmit
 ```
 
-Always write a short, literal `alt` description — it is what screen readers and
-search engines read. Get written parent permission before publishing any photo
-of a child.
-
-### Brand colors and fonts
-
-Colors and fonts are defined once, at the top of `src/app/globals.css` (look for
-`@theme`). Change a value there and it updates across the whole site. The logo
-is a hand-drawn SVG owl in `src/components/owl-mark.tsx`, reused for the browser
-tab icon (`src/app/icon.svg`) and the social sharing image
-(`src/app/opengraph-image.tsx`).
-
----
-
-## 3. Placeholders to replace before launch
-
-Anything wrapped in `[square brackets]` is a placeholder. Search the project for
-`[` to find them all. The important ones:
-
-- [ ] **Street address** — `[Address]` in `src/content/site.ts`
-- [ ] **City, state, ZIP** — `[City, State ZIP]` in `src/content/site.ts` (also
-      appears in home and about copy)
-- [ ] **Phone number** — `[Phone]` in `src/content/site.ts`; consider making it
-      a clickable `tel:` link
-- [ ] **Email address** — `hello@babyowl.example` → your real inbox
-      (`src/content/site.ts`)
-- [ ] **Opening hours** — `[Open time] – [Close time]` in `src/content/site.ts`
-- [ ] **State license number and licensing agency** — `[State license #]`,
-      `[state licensing agency]`
-- [ ] **Insurance policy number** — `[policy #]` on the About page
-- [ ] **Teacher-to-child ratios, group sizes, tuition** — `src/content/programs.ts`
-      (confirm against your state's current licensing rules)
-- [ ] **Daily schedule times** — `dayRhythm` in `src/app/programs/page.tsx`
-- [ ] **Founding year** — `[Year]` on the About page
-- [ ] **Staff names, credentials, bios** — `src/content/team.ts`
-- [ ] **Parent testimonials** — `testimonials` in `src/content/home.ts` (use real
-      quotes, with permission)
-- [ ] **Sick-child details** — `[temperature]`, `[24 hours]` on the Programs page
-      and in the FAQs
-- [ ] **Tour days/times and reply time** — `[days/times]`, `[1–2 business days]`
-- [ ] **Privacy notice specifics** — retention window, who sees inquiries, "last
-      updated" date in `src/app/privacy/page.tsx`
-- [ ] **Social media links** — `social` in `src/content/site.ts` (or delete them)
-- [ ] **Photos** — replace every photo placeholder (see above)
-- [ ] **Live website address** — `url` in `src/content/site.ts`, used for SEO,
-      the sitemap, and social previews
-
----
-
-## 4. Put it online (Vercel)
-
-1. Push this repository to GitHub.
-2. Create a free account at [vercel.com](https://vercel.com) and choose
-   **Add New → Project**, then pick this repository.
-3. Vercel detects Next.js automatically. Leave every setting as-is and click
-   **Deploy**.
-4. You get a live URL in a minute or two. To use your own domain, open
-   **Project → Settings → Domains**, add `babyowl.com` (or whichever domain you
-   own), and follow the DNS instructions.
-5. After you have the real domain, update `url` in `src/content/site.ts` so
-   search engines and social previews point at it.
-
-From then on, every change you push to the `main` branch publishes
-automatically, and every pull request gets its own preview link.
-
----
-
-## 5. Receiving form submissions for real
-
-The Contact form validates everything in the browser and then posts to
-`src/app/api/inquiries/route.ts`. **That handler currently only writes the
-inquiry to the server log** (visible under *Logs* in the Vercel dashboard) — it
-does not email you. Nothing breaks, but you would miss inquiries.
-
-Pick one of these before launch:
-
-- **Email service (recommended).** Sign up for [Resend](https://resend.com) or
-  [Postmark](https://postmarkapp.com), add your API key as an environment
-  variable in Vercel (**Settings → Environment Variables**), and send the
-  payload from the `POST` handler. The file has a comment marking the spot.
-- **Form service.** Point the form at [Formspree](https://formspree.io) or
-  Netlify Forms and skip the API route entirely.
-- **Email-only fallback.** Delete the form and keep the `mailto:` links that
-  already appear beside it and in the footer.
-
-If the request ever fails, the form shows the parent a "send it as an email
-instead" link with their message pre-filled, so no inquiry is lost.
-
----
-
-## 6. Project structure
+## Project structure
 
 ```
 src/
 ├─ app/
-│  ├─ layout.tsx          # header + footer wrapper, fonts, site-wide SEO
-│  ├─ page.tsx            # Home
-│  ├─ about/page.tsx      # About
-│  ├─ programs/page.tsx   # Programs, daily rhythm, safety & ratios
-│  ├─ contact/page.tsx    # Contact & Enroll, FAQs
-│  ├─ privacy/page.tsx    # Privacy notice
-│  ├─ api/inquiries/      # Contact form handler (stub)
-│  ├─ icon.svg            # Browser tab icon
-│  ├─ opengraph-image.tsx # Social sharing image
-│  ├─ sitemap.ts          # /sitemap.xml
-│  ├─ robots.ts           # /robots.txt
-│  └─ globals.css         # Brand colors, fonts, base styles
-├─ components/            # Header, footer, logo, buttons, cards, form
-└─ content/               # ← plain-text content you edit
+│  ├─ layout.tsx            root layout, fonts, metadata, header/footer
+│  ├─ page.tsx              home / thesis
+│  ├─ approach/             principles + process + quotes
+│  ├─ criteria/             investment criteria, anti-criteria, structures
+│  ├─ sectors/              four focus sectors
+│  ├─ portfolio/            portfolio entries (placeholders)
+│  ├─ contact/              inquiry form + contact details
+│  ├─ api/inquiry/route.ts  stub inquiry endpoint
+│  ├─ icon.svg              favicon (geometric owl mark)
+│  ├─ opengraph-image.tsx   generated 1200×630 social card
+│  ├─ sitemap.ts, robots.ts
+│  ├─ not-found.tsx
+│  └─ globals.css           design tokens + base/component styles
+├─ components/
+│  ├─ primitives.tsx        Container, Section, Eyebrow, Rule, SectionHeading, ActionLink
+│  ├─ OwlMark.tsx           brand mark
+│  ├─ SiteHeader.tsx        fixed nav (transparent over hero, solid on scroll)
+│  ├─ SiteFooter.tsx
+│  ├─ InquiryForm.tsx       client form with mailto fallback
+│  ├─ Reveal.tsx            scroll-reveal wrapper
+│  ├─ StructuredData.tsx    Organization JSON-LD
+│  └─ sections/             HomeHero, PageHero, PrinciplesGrid, CriteriaColumns,
+│                           SectorList, PortfolioList, QuoteList, ContactCta
+└─ content/                 ← all editable copy lives here
+   ├─ site.ts               brand, nav, contact details, footer/legal text
+   ├─ home.ts               hero, thesis narrative, stats, closing CTA
+   ├─ principles.ts         approach copy, six principles, process, quotes
+   ├─ criteria.ts           criteria groups, financial ranges, anti-criteria
+   ├─ sectors.ts            four sectors and their verticals
+   └─ portfolio.ts          portfolio entries
 ```
 
-## Accessibility notes
+### Editing content
 
-The site is built to be usable with a keyboard and a screen reader: semantic
-landmarks, a skip-to-content link, visible focus outlines, labelled form fields
-with spoken error messages, alt text on meaningful imagery, and colors chosen
-for readable contrast. If you add sections, keep headings in order (one `h1` per
-page, then `h2`, then `h3`) and always pair an input with a `<label>`.
+Everything a non-engineer would want to change lives in `src/content/` as plain
+TypeScript objects and arrays. No CMS, no MDX, no build step beyond the normal
+one. Add or remove array entries and the layouts adapt:
+
+- `principles.ts` → the principles grid reflows at any count (3 per row on desktop)
+- `sectors.ts` → sector rows are numbered automatically
+- `portfolio.ts` → entries render in order; the home page shows the first three
+- `navigation` in `site.ts` → drives both the desktop nav and the mobile menu
+
+## Design system
+
+A deliberately restrained institutional palette, defined once in
+`src/app/globals.css` under `@theme`:
+
+| Token           | Value     | Use                                       |
+| --------------- | --------- | ----------------------------------------- |
+| `ink`           | `#101720` | dark navy-charcoal sections, header, footer |
+| `ink-soft`      | `#18212e` | hover states on dark                      |
+| `ink-line`      | `#27323f` | hairline rules on dark                    |
+| `ink-muted`     | `#a7b0bd` | body copy on dark                         |
+| `cream`         | `#f7f4ed` | primary light background                  |
+| `cream-deep`    | `#efeae0` | alternating light background              |
+| `sand`          | `#dcd5c6` | hairline rules on light                   |
+| `graphite`      | `#545d6b` | body copy on light                        |
+| `brass`         | `#a8834f` | accent on dark (labels, rules, mark)      |
+| `brass-deep`    | `#7c5b2d` | accent text on light (AA contrast)        |
+
+Conventions worth keeping if you extend the site:
+
+- Sections alternate `cream` → `cream-deep` → `ink` for vertical rhythm; use the
+  `Section` primitive's `tone` and `spacing` props rather than ad-hoc padding.
+- Headings are serif; everything else is sans. Small uppercase tracked labels use
+  the `.eyebrow` class.
+- Cards are borderless — structure comes from hairline rules (`border-t`), not
+  boxes or shadows.
+- Long-form copy sits in a `max-w-3xl` measure via `Container width="prose"` or
+  the `.editorial` class.
+
+## Contact form
+
+`src/app/api/inquiry/route.ts` is a **stub**. It validates and length-checks the
+payload, logs a summary server-side, and returns `202`. Nothing is delivered
+anywhere yet.
+
+To make it real, replace the `console.info` call with your delivery mechanism
+(transactional email, CRM, or webhook) and add whatever credentials it needs as
+environment variables. Consider adding spam protection at the same time — the
+endpoint currently has no rate limiting or captcha.
+
+If the request fails for any reason, `InquiryForm` surfaces a `mailto:` fallback
+pre-filled with everything the visitor typed, so an inquiry is never lost.
+
+## Accessibility and SEO
+
+- Skip-to-content link, single `h1` per page, labelled sections, and
+  `aria-current` on the active nav item.
+- Visible `:focus-visible` outlines; the mobile menu closes on `Escape` and locks
+  body scroll while open.
+- Colour pairings meet WCAG AA for body text; `brass-deep` is used instead of
+  `brass` wherever accent text sits on a light background.
+- All motion is suppressed under `prefers-reduced-motion`.
+- Per-page `title`/`description`, canonical URLs, Open Graph and Twitter cards,
+  a generated OG image, `sitemap.xml`, `robots.txt`, and Organization JSON-LD
+  that deliberately omits any value still holding a `[Placeholder]`.
+
+## Placeholders checklist
+
+Everything below ships as a placeholder or an editable default. Replace before
+launch.
+
+**Contact and identity — `src/content/site.ts`**
+
+- [ ] `site.url` — currently `https://babyowl.example`; required for correct
+      canonical URLs, sitemap and OG tags
+- [ ] `contact.email` — currently `contact@babyowl.example`
+- [ ] `contact.phone` — currently `[Phone]`
+- [ ] `contact.city` / `contact.region` — currently `[City]`, `[State]`
+- [ ] `contact.address` — currently `[Street Address]`
+- [ ] `footer.disclaimer` — have counsel review the legal language
+
+**Investment mandate — `src/content/criteria.ts`**
+
+- [ ] Revenue range (default `$10–75 million`)
+- [ ] EBITDA range (default `$2–15 million`)
+- [ ] Margin threshold (default `15%+`)
+- [ ] Transaction structures on `/criteria`, if the mandate differs
+
+**Firm claims — `src/content/home.ts`**
+
+- [ ] `stats` — intended hold period, acquisitions per year, target revenue
+- [ ] `thesis.paragraphs` — the narrative is written to be credible but is not
+      a factual account of the firm's history
+
+**Portfolio — `src/content/portfolio.ts`**
+
+- [ ] Every entry is **fictional and illustrative**. Replace with real holdings,
+      set `isPlaceholder: false` (which removes the "Placeholder" tag), fill in
+      each `year`, and delete `portfolioIntro.placeholderNotice` plus
+      `footer.placeholderNotice` in `site.ts` once nothing is illustrative.
+
+**Infrastructure**
+
+- [ ] Wire `src/app/api/inquiry/route.ts` to a real inbox or CRM
+- [ ] Add spam protection / rate limiting to the inquiry endpoint
+- [ ] Add analytics, if wanted
+
+## Notes on the design
+
+The visual language — cream and charcoal, serif headlines over a tracked-out
+sans, hairline rules instead of cards, generous vertical rhythm — follows the
+conventions of contemporary lower-middle-market private equity sites. The
+BABYOWL name, mark, palette, copy and portfolio are original to this project.

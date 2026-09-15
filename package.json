@@ -1,8 +1,8 @@
 {
-  "name": "babyowl-website",
+  "name": "babyowl-site",
   "version": "0.1.0",
   "private": true,
-  "description": "Marketing website for BABYOWL childcare",
+  "description": "Marketing site for BABYOWL, a lower-middle-market private investment firm.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
