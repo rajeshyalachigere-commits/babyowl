@@ -9,7 +9,7 @@ import { portfolioIntro } from "@/content/portfolio";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "The profile of businesses BABYOWL acquires and holds. Portfolio entries shown are illustrative placeholders, not completed transactions.",
+    "The kind of owner-led businesses BABYOWL backs and holds. Portfolio entries shown are illustrative placeholders, not completed transactions.",
   alternates: { canonical: "/portfolio" },
 };
 
@@ -33,10 +33,11 @@ export default function PortfolioPage() {
               accent="not flipped."
             >
               <p>
-                Each of these businesses came from an owner who had a choice. We
-                keep the name on the building, keep the team that earned the
-                customer, and spend our time on the parts of the business that
-                compound.
+                Every operator here had a choice, and every site had another
+                bidder. We keep the name above the door, keep the team that
+                earned the customer, and spend our time on the unglamorous work
+                that compounds — a better manager, a fairer lease, one more unit
+                let to someone who intends to stay.
               </p>
             </SectionHeading>
             <p
@@ -53,10 +54,10 @@ export default function PortfolioPage() {
       </Section>
 
       <ContactCta
-        eyebrow="Add your company"
+        eyebrow="Add yours"
         headline="The next one could be yours."
         accent="could be yours."
-        body="We acquire a small number of businesses each year. If yours fits the profile above, we would welcome a confidential conversation."
+        body="We make one or two investments a year, whether that is a franchise group or a site to build on. If yours resembles anything above, we would welcome a confidential conversation."
       />
     </>
   );

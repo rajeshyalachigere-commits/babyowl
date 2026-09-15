@@ -14,7 +14,7 @@ import { sectorsIntro } from "@/content/sectors";
 export const metadata: Metadata = {
   title: "Focus sectors",
   description:
-    "BABYOWL concentrates on essential business services, healthcare services, multisite consumer services, and technology-enabled services in the lower middle market.",
+    "BABYOWL invests in essential business services, healthcare services, multisite consumer services, and technology-enabled services — the markets our partners have worked in themselves.",
   alternates: { canonical: "/sectors" },
 };
 
@@ -33,7 +33,7 @@ export default function SectorsPage() {
           <Reveal>
             <SectionHeading
               headingId="sectors-heading"
-              eyebrow="Four areas"
+              eyebrow="Two focus areas, one overlap"
               title="Deep, not wide."
               accent="not wide."
             >
@@ -56,23 +56,24 @@ export default function SectorsPage() {
                 className="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] leading-[1.12]"
               >
                 <AccentText
-                  text="We are buying the same business four different ways."
-                  accent="four different ways."
+                  text="A childcare group and a parade of shops are the same investment."
+                  accent="the same investment."
                 />
               </h2>
             </Reveal>
             <Reveal delay={120} className="editorial">
               <p>
-                Across all four sectors we are looking for the same shape:
-                revenue that repeats, a customer who would notice if the service
-                stopped, and a market fragmented enough that being well run is
-                still a genuine advantage.
+                Both are bets on a specific place. A nursery works because it is
+                on the road parents already drive down; a shop works because it
+                is where people already stop. Neither can be relocated to
+                improve a return, and neither can be fixed from a distance.
               </p>
               <p>
-                We are less interested in growth that comes from a single
-                contract, a single channel, or a single hire. We would rather
-                own a business that grows a little every year for twenty years
-                than one that doubles once and then explains itself.
+                Both also reward waiting. Consent takes as long as it takes, a
+                manager worth keeping takes longer to find than to pay for, and
+                a waiting list is built one family at a time. We would rather
+                own something that improves a little every year for twenty years
+                than something that doubles once and then has to explain itself.
               </p>
             </Reveal>
           </div>
@@ -80,10 +81,10 @@ export default function SectorsPage() {
       </Section>
 
       <ContactCta
-        eyebrow="In one of these markets?"
+        eyebrow="Run a group, or own a site?"
         headline="We would like to hear from you early."
         accent="early."
-        body="Even years ahead of a transaction, a conversation with someone who knows your market is rarely wasted time."
+        body="Even years ahead of anything happening, a conversation with someone who knows your market is rarely wasted time. If you own land you think a shop belongs on, we would like to see it."
       />
     </>
   );

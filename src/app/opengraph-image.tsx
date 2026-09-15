@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { hero } from "@/content/home";
 import { site } from "@/content/site";
 
 export const alt = `${site.name} — ${site.tagline}`;
@@ -55,7 +56,7 @@ export default function OpengraphImage() {
               maxWidth: 900,
             }}
           >
-            Owners first. Capital second.
+            {hero.headline}
           </div>
           <div style={{ width: 96, height: 2, background: "#a8834f", marginTop: 36 }} />
           <div
@@ -67,8 +68,7 @@ export default function OpengraphImage() {
               maxWidth: 860,
             }}
           >
-            Long-term capital partnership for values-driven, entrepreneur-owned
-            businesses in the lower middle market.
+            {hero.subhead}
           </div>
         </div>
       </div>

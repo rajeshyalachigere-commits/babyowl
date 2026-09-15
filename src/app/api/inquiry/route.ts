@@ -10,16 +10,30 @@ import { NextResponse } from "next/server";
 
 type InquiryPayload = {
   name: string;
-  company: string;
   email: string;
   message: string;
+  company: string;
+  inquiryType: string;
 };
+
+/** Keep in sync with `inquiryTypes` in src/content/site.ts. */
+const INQUIRY_TYPES = [
+  "owner",
+  "landowner",
+  "adviser",
+  "family-or-friend",
+  "other",
+] as const;
+
+/** Company is only expected from audiences that have one. */
+const REQUIRED_FIELDS = ["name", "email", "message"] as const;
 
 const MAX_LENGTHS: Record<keyof InquiryPayload, number> = {
   name: 120,
-  company: 160,
   email: 200,
   message: 5000,
+  company: 160,
+  inquiryType: 40,
 };
 
 function validate(body: unknown) {
@@ -30,9 +44,9 @@ function validate(body: unknown) {
   }
 
   const record = body as Record<string, unknown>;
-  const payload = {} as InquiryPayload;
+  const payload = { company: "", inquiryType: "other" } as InquiryPayload;
 
-  for (const key of Object.keys(MAX_LENGTHS) as Array<keyof InquiryPayload>) {
+  for (const key of REQUIRED_FIELDS) {
     const value = record[key];
     if (typeof value !== "string" || value.trim() === "") {
       errors.push(`"${key}" is required.`);
@@ -43,6 +57,27 @@ function validate(body: unknown) {
       continue;
     }
     payload[key] = value.trim();
+  }
+
+  if (record.company !== undefined) {
+    if (typeof record.company !== "string") {
+      errors.push('"company" must be a string.');
+    } else if (record.company.length > MAX_LENGTHS.company) {
+      errors.push('"company" is too long.');
+    } else {
+      payload.company = record.company.trim();
+    }
+  }
+
+  if (record.inquiryType !== undefined) {
+    if (
+      typeof record.inquiryType !== "string" ||
+      !INQUIRY_TYPES.includes(record.inquiryType as (typeof INQUIRY_TYPES)[number])
+    ) {
+      errors.push('"inquiryType" is not a recognised value.');
+    } else {
+      payload.inquiryType = record.inquiryType;
+    }
   }
 
   if (payload.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
@@ -75,8 +110,9 @@ export async function POST(request: Request) {
 
   // TODO: replace with a real delivery mechanism (email, CRM, or webhook).
   console.info("[inquiry] received", {
+    inquiryType: result.payload.inquiryType,
     name: result.payload.name,
-    company: result.payload.company,
+    company: result.payload.company || null,
     email: result.payload.email,
     messageLength: result.payload.message.length,
     receivedAt: new Date().toISOString(),

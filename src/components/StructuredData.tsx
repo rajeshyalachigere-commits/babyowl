@@ -17,9 +17,10 @@ export function StructuredData() {
     logo: new URL("/icon.svg", site.url).toString(),
     slogan: site.tagline,
     knowsAbout: [
-      "Private equity",
-      "Lower middle market acquisitions",
-      "Business succession planning",
+      "Childcare franchise investment",
+      "Retail property development",
+      "Patient capital",
+      "Family and friends investment",
     ],
   };
 

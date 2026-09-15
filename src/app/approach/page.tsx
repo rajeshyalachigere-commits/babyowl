@@ -6,6 +6,7 @@ import {
   Section,
   SectionHeading,
 } from "@/components/primitives";
+import { CapitalSection } from "@/components/sections/CapitalSection";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { PageHero } from "@/components/sections/PageHero";
 import { PrinciplesGrid } from "@/components/sections/PrinciplesGrid";
@@ -15,7 +16,7 @@ import { approachIntro, process, quotesIntro } from "@/content/principles";
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "The principles BABYOWL operates by, and what working with us actually looks like — from first conversation through closing and beyond.",
+    "Where BABYOWL's capital comes from, the principles we operate by, and what working with us actually looks like — from first conversation through closing and long afterwards.",
   alternates: { canonical: "/approach" },
 };
 
@@ -29,7 +30,9 @@ export default function ApproachPage() {
         lead={approachIntro.paragraphs[0]}
       />
 
-      <Section tone="cream" aria-labelledby="principles-heading">
+      <CapitalSection tone="cream" />
+
+      <Section tone="creamDeep" aria-labelledby="principles-heading">
         <Container width="wide">
           <Reveal>
             <SectionHeading
@@ -47,7 +50,7 @@ export default function ApproachPage() {
         </Container>
       </Section>
 
-      <Section tone="creamDeep" aria-labelledby="process-heading">
+      <Section tone="cream" aria-labelledby="process-heading">
         <Container width="wide">
           <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <Reveal>
@@ -63,9 +66,9 @@ export default function ApproachPage() {
               </h2>
               <div aria-hidden className="mt-9 h-px w-16 bg-brass" />
               <p className="mt-9 max-w-sm leading-relaxed text-graphite">
-                Most owners we speak with are not running a process. They are
-                thinking about one. We are happy to be the first call, years
-                early.
+                Most people we speak with are not running a process. They are
+                thinking about one, or they own a field and wonder what it could
+                be. We are happy to be the first call, years early.
               </p>
             </Reveal>
 
@@ -121,7 +124,7 @@ export default function ApproachPage() {
         eyebrow="Next step"
         headline="One conversation, no materials required."
         accent="no materials required."
-        body="If any of the above sounds like the partner you have been looking for, we would like to hear about the business you built."
+        body="If any of the above sounds like the partner you have been looking for, we would like to hear about the business you run or the site you own."
       />
     </>
   );

@@ -29,12 +29,12 @@ export const metadata: Metadata = {
   description: site.description,
   applicationName: site.name,
   keywords: [
-    "private equity",
-    "lower middle market",
-    "entrepreneur-owned business",
-    "long-term hold",
-    "business succession",
-    "majority recapitalisation",
+    "childcare franchise investment",
+    "retail property development",
+    "build to suit shops",
+    "family and friends capital",
+    "patient capital",
+    "freehold investment",
   ],
   authors: [{ name: site.legalName }],
   openGraph: {

@@ -9,12 +9,18 @@ import {
 import { ContactCta } from "@/components/sections/ContactCta";
 import { CriteriaColumns } from "@/components/sections/CriteriaColumns";
 import { PageHero } from "@/components/sections/PageHero";
-import { antiCriteria, criteriaIntro } from "@/content/criteria";
+import {
+  antiCriteria,
+  criteriaIntro,
+  franchiseCriteria,
+  propertyCriteria,
+  structures,
+} from "@/content/criteria";
 
 export const metadata: Metadata = {
   title: "Investment criteria",
   description:
-    "BABYOWL acquires profitable lower-middle-market businesses: $10–75 million of revenue, durable margins, fragmented markets, and owners who care what happens next.",
+    "What BABYOWL looks for in a childcare franchise operator, and what we look for in a site for shops — two mandates, judged against two different sets of tests.",
   alternates: { canonical: "/criteria" },
 };
 
@@ -28,20 +34,39 @@ export default function CriteriaPage() {
         lead={criteriaIntro.paragraphs[0]}
       />
 
-      <Section tone="cream" aria-labelledby="criteria-heading">
+      <Section tone="cream" aria-labelledby="franchise-heading">
         <Container width="wide">
           <Reveal>
             <SectionHeading
-              headingId="criteria-heading"
-              eyebrow="A fit looks like this"
-              title="Three tests, applied honestly."
-              accent="applied honestly."
+              headingId="franchise-heading"
+              eyebrow={franchiseCriteria.eyebrow}
+              title={franchiseCriteria.headline}
+              accent={franchiseCriteria.headlineAccent}
             >
               <p>{criteriaIntro.paragraphs[1]}</p>
+              <p>{franchiseCriteria.lead}</p>
             </SectionHeading>
           </Reveal>
           <div className="mt-16 md:mt-20">
-            <CriteriaColumns />
+            <CriteriaColumns groups={franchiseCriteria.groups} />
+          </div>
+        </Container>
+      </Section>
+
+      <Section tone="creamDeep" aria-labelledby="property-heading">
+        <Container width="wide">
+          <Reveal>
+            <SectionHeading
+              headingId="property-heading"
+              eyebrow={propertyCriteria.eyebrow}
+              title={propertyCriteria.headline}
+              accent={propertyCriteria.headlineAccent}
+            >
+              <p>{propertyCriteria.lead}</p>
+            </SectionHeading>
+          </Reveal>
+          <div className="mt-16 md:mt-20">
+            <CriteriaColumns groups={propertyCriteria.groups} />
           </div>
         </Container>
       </Section>
@@ -89,26 +114,13 @@ export default function CriteriaPage() {
           <Reveal>
             <SectionHeading
               headingId="structure-heading"
-              eyebrow="Structure"
-              title="How transactions usually come together."
-              accent="come together."
+              eyebrow={structures.eyebrow}
+              title={structures.headline}
+              accent={structures.headlineAccent}
             />
           </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-12">
-            {[
-              {
-                title: "Full acquisition",
-                body: "The owner is ready to step back. We buy the business outright and work with existing leadership, or place a new operator alongside them.",
-              },
-              {
-                title: "Majority recapitalisation",
-                body: "The owner takes meaningful liquidity now and keeps a real stake in what comes next, with governance written down before closing.",
-              },
-              {
-                title: "Succession transition",
-                body: "Leadership is changing hands internally. We provide the capital and the patience for a handover measured in years, not weeks.",
-              },
-            ].map((item, index) => (
+            {structures.items.map((item, index) => (
               <Reveal
                 key={item.title}
                 delay={index * 90}
@@ -128,7 +140,7 @@ export default function CriteriaPage() {
         eyebrow="Not sure you fit?"
         headline="Send it anyway. We will tell you straight."
         accent="We will tell you straight."
-        body="If the business sits outside the ranges above but you think it is exceptional, we would still rather see it than miss it."
+        body="If your business sits outside the ranges above but you believe it is exceptional, we would far rather see it than miss it."
       />
     </>
   );

@@ -3,23 +3,19 @@ export const approachIntro = {
   headline: "How we behave, written down.",
   headlineAccent: "written down.",
   paragraphs: [
-    "Every firm says it is different. The only useful test is what a firm does in the months after the wire clears — when the diligence questions are answered, the lawyers have gone home, and someone has to decide whether to keep the plant in a town that a spreadsheet says is inconvenient.",
-    "These are the principles we operate by. They are deliberately short, because we intend to be held to them.",
+    "Every investor says they are different. The only useful test is what they do in the years after the money moves — when the questions are answered, the lawyers have gone home, and someone has to decide whether to put the rent up on a tenant having a hard year.",
+    "These are the principles we operate by. They are deliberately short, because our own families are invested alongside you and we intend to be held to them.",
   ],
 } as const;
 
 export const principles = [
   {
-    title: "The money is the easy part.",
-    body: "Anyone can wire funds. We invest where we have operated, where we know which levers actually move, and where our presence changes the outcome rather than the cap table.",
+    title: "It is our own money.",
+    body: "Every pound we invest belongs to our families or to friends we see socially. That concentrates the mind more effectively than any investment committee, and it means we are never spending someone else's patience.",
   },
   {
     title: "We are not on a clock.",
-    body: "No artificial hold period, no forced exit to clear a fund vintage. Every decision gets made on a twenty-year horizon, which changes almost all of them.",
-  },
-  {
-    title: "A very high bar, held quietly.",
-    body: "We do not spread bets. We would rather do one thing well each year than five things adequately, and we are comfortable being wrong by omission.",
+    body: "No fund, no vintage year, no exit scheduled to suit a fundraising cycle. Every decision gets made on a twenty-year horizon, which quietly changes almost all of them.",
   },
   {
     title: "Underpromise. Overdeliver.",
@@ -27,11 +23,15 @@ export const principles = [
   },
   {
     title: "The people came with the business.",
-    body: "Employees and customers are the reason the company is worth buying. We do not treat them as a line item to be optimised in the first hundred days.",
+    body: "The staff who keep a setting full, and the shopkeeper who opens six days a week, are the reason any of it is worth owning. We do not treat them as a line item to be optimised in the first hundred days.",
+  },
+  {
+    title: "A landlord you would recommend.",
+    body: "We want our tenants trading in twenty years, not squeezed at the next review. A rent that is payable in a bad year is worth more to us than a headline figure that is not.",
   },
   {
     title: "We will do the unglamorous work.",
-    body: "Route density, hiring, a new phone system, a Saturday in a warehouse. If it is what the business needs, it is what we will help do.",
+    body: "A planning appeal, a manager to recruit, a shopfront to replace, a Saturday spent counting footfall. If it is what the investment needs, it is what we will help do.",
   },
 ] as const;
 
@@ -42,15 +42,15 @@ export const process = {
   steps: [
     {
       title: "A conversation",
-      body: "One call, no materials required. You tell us about the business and what you want to happen next. We tell you plainly whether we are a fit.",
+      body: "One call, no materials required. You tell us about the business you run or the site you own, and what you want to happen next. We tell you plainly whether we are a fit.",
     },
     {
       title: "A written point of view",
-      body: "If there is interest on both sides, we come back with how we see the business, what we would pay, and what we would and would not change.",
+      body: "If there is interest on both sides, we come back with how we see it, what we think it is worth, and — for a site — what we believe can actually be built on it.",
     },
     {
-      title: "Confirmatory diligence",
-      body: "Focused and finite. We ask for what we need to be confident, not for everything a checklist can imagine, and we protect your team's time.",
+      title: "Questions, not a data room",
+      body: "Focused and finite. We ask for what we need to be confident, not for everything a checklist can imagine, and we protect your team's time while we do it.",
     },
     {
       title: "Close, then stay",

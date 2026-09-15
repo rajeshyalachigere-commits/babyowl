@@ -1,89 +1,92 @@
 export const portfolioIntro = {
   eyebrow: "Portfolio",
-  headline: "Businesses we intend to own for a very long time.",
-  headlineAccent: "for a very long time.",
+  headline: "Businesses we back, and buildings we keep.",
+  headlineAccent: "buildings we keep.",
   paragraphs: [
-    "We measure ourselves by whether these businesses are better run, better staffed and more durable than the day we bought them — not by how quickly we can sell them.",
+    "We measure ourselves by whether these businesses are better run and better staffed than the day we invested, and whether the sites we built are still the ones people choose. Our own families own a share of every one, which is the only performance report that really matters to us.",
   ],
   /**
    * PLACEHOLDER NOTICE — keep this visible until real holdings replace the
    * illustrative entries below. See README.md "Placeholders checklist".
    */
   placeholderNotice:
-    "Illustrative placeholders. The companies below are examples of the profile we pursue and do not represent completed transactions.",
+    "Illustrative placeholders. The entries below are examples of the two kinds of investment we pursue and do not represent completed transactions.",
 } as const;
 
 /**
  * PLACEHOLDER: every entry below is fictional and exists only to show the
- * intended layout. Replace with real portfolio companies before launch, and
- * remove `isPlaceholder` once an entry is genuine.
+ * intended layout. Replace with real holdings before launch, and remove
+ * `isPlaceholder` once an entry is genuine.
+ *
+ * `sector` should match a name from src/content/sectors.ts. Note that childcare
+ * entries describe businesses we invest in — BABYOWL does not operate settings.
  */
 export const portfolio = [
   {
-    name: "Northwind Facility Group",
-    sector: "Essential Business Services",
+    name: "Hollowbrook Early Years Group",
+    sector: "Childcare Franchises",
     // PLACEHOLDER: replace with the real investment year.
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "A regional provider of contracted janitorial and building maintenance services to schools, clinics and light industrial sites.",
+      "A franchisee group operating six early-years settings under a national franchise brand across two neighbouring counties.",
     detail:
-      "Founder-led for twenty-two years. The thesis is unglamorous: route density, disciplined pricing, and giving supervisors a career path so that crews stop turning over every nine months.",
+      "The founder had built a full, well-inspected group and run out of capital two sites before she ran out of ambition. We funded the next three openings and took payroll, property and franchise reporting off her desk. She still runs it.",
   },
   {
-    name: "Cedar Line Veterinary Partners",
-    sector: "Multisite Consumer Services",
+    name: "Marlow Street Retail Parade",
+    sector: "Shop & Retail Real Estate",
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "A group of general-practice veterinary clinics operating under their original local names.",
+      "A seven-unit neighbourhood parade bought part-let, on a road people already walk down to reach the station.",
     detail:
-      "We keep the sign on the building and the doctor in the room. Central support absorbs scheduling, billing and hiring so clinicians can go back to practising medicine.",
+      "Three units were empty and two were let below what the pitch deserved. The work was unglamorous: new shopfronts, sensible lease terms, and finding independents who wanted a twenty-year home rather than a twelve-month gamble.",
   },
   {
-    name: "Meridian Testing & Inspection",
-    sector: "Essential Business Services",
+    name: "Ashcroft Lane Build-to-Suit",
+    sector: "Shop & Retail Real Estate",
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "Accredited materials testing and field inspection for infrastructure and commercial construction.",
+      "A roadside plot bought with outline consent and developed into four retail units for occupiers who signed before we broke ground.",
     detail:
-      "A licence-and-reputation business where accreditation is the moat. Growth comes from adding certifications and technicians in adjacent metros, one at a time.",
+      "We do not start building on hope. Two of the four units were pre-let at exchange, the contractor was one we had used twice before, and the scheme was designed so any unit could take a different trade later.",
   },
   {
-    name: "Halyard Managed Technology",
-    sector: "Technology-Enabled Services",
+    name: "Bright Lane Nursery Freeholds",
+    sector: "Where The Two Meet",
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "Managed IT and cybersecurity services for mid-sized professional-services firms.",
+      "Four freeholds bought beneath settings operated by a franchisee group we already back, on long leases at rents set to be payable in a bad year.",
     detail:
-      "Bought from two engineers who had built an excellent service organisation and a nonexistent sales function. The work is commercial discipline, not a rebuild.",
+      "This is the position we like best. The operator gets a landlord who wants them trading in twenty years' time rather than a rent review that squeezes them; we get buildings with a use, a tenant we know, and a plausible second use if anything changes.",
   },
   {
-    name: "Ashfield Rehabilitation Services",
-    sector: "Healthcare Services",
+    name: "Kestrel Activity Franchising",
+    sector: "Childcare Franchises",
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "Outpatient physical therapy clinics serving suburban and small-city markets.",
+      "A franchisor licensing an after-school and holiday activity brand to around forty owner-operators.",
     detail:
-      "Clinician-owned and clinician-run. We fund new locations, take payer contracting and credentialing off the founders' desk, and leave the treatment model alone.",
+      "Bought from two founders who had built a brand franchisees genuinely valued and a support function that had not grown with it. The work is training, systems and territory discipline, not a rebrand.",
   },
   {
-    name: "Brightwater Home Services",
-    sector: "Multisite Consumer Services",
+    name: "Fenwick Yard",
+    sector: "Shop & Retail Real Estate",
     year: "[Year]",
-    status: "Realised",
+    status: "Handed on",
     isPlaceholder: true,
     summary:
-      "Residential plumbing, HVAC and water treatment across a single metropolitan region.",
+      "A small yard and workshop site converted to three retail units under a change of use.",
     detail:
-      "Held while the second-generation family leadership took full control, then sold to that team. Not every good outcome is a sale to a stranger.",
+      "Held while the scheme was consented, built and fully let, then sold to the family who had occupied the largest unit from the first week. Not every good outcome is a sale to a stranger.",
   },
 ] as const;

@@ -8,6 +8,7 @@ import {
   Section,
   SectionHeading,
 } from "@/components/primitives";
+import { CapitalSection } from "@/components/sections/CapitalSection";
 import { ContactCta } from "@/components/sections/ContactCta";
 import { CriteriaColumns } from "@/components/sections/CriteriaColumns";
 import { HomeHero } from "@/components/sections/HomeHero";
@@ -15,7 +16,7 @@ import { PortfolioList } from "@/components/sections/PortfolioList";
 import { PrinciplesGrid } from "@/components/sections/PrinciplesGrid";
 import { QuoteList } from "@/components/sections/QuoteList";
 import { SectorList } from "@/components/sections/SectorList";
-import { criteriaIntro } from "@/content/criteria";
+import { criteriaIntro, criteriaPreview } from "@/content/criteria";
 import { closing, stats, thesis } from "@/content/home";
 import { approachIntro, quotesIntro } from "@/content/principles";
 import { portfolioIntro } from "@/content/portfolio";
@@ -69,7 +70,40 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      <Section tone="ink" spacing="tight" aria-label="Firm at a glance">
+      <Section tone="ink" aria-labelledby="sectors-heading">
+        <Container width="wide">
+          <Reveal>
+            <div className="max-w-3xl">
+              <p className="eyebrow text-brass">{sectorsIntro.eyebrow}</p>
+              <h2
+                id="sectors-heading"
+                className="mt-6 text-3xl leading-[1.12] sm:text-4xl lg:text-[2.9rem]"
+              >
+                <AccentText
+                  text={sectorsIntro.headline}
+                  accent={sectorsIntro.headlineAccent}
+                />
+              </h2>
+              <div className="mt-7 editorial">
+                <p>{sectorsIntro.paragraphs[0]}</p>
+                <p>{sectorsIntro.paragraphs[1]}</p>
+              </div>
+            </div>
+          </Reveal>
+          <div className="mt-16 md:mt-20">
+            <SectorList tone="dark" />
+          </div>
+          <Reveal className="mt-14">
+            <ActionLink href="/sectors" variant="outlineLight">
+              Explore where we invest
+            </ActionLink>
+          </Reveal>
+        </Container>
+      </Section>
+
+      <CapitalSection tone="creamDeep" />
+
+      <Section tone="ink" spacing="tight" aria-label="The partnership at a glance">
         <Container width="wide">
           <dl className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {stats.map((stat, index) => (
@@ -127,41 +161,11 @@ export default function HomePage() {
             </SectionHeading>
           </Reveal>
           <div className="mt-16 md:mt-20">
-            <CriteriaColumns />
+            <CriteriaColumns groups={criteriaPreview} />
           </div>
           <Reveal className="mt-14">
             <ActionLink href="/criteria" variant="outline">
               Full investment criteria
-            </ActionLink>
-          </Reveal>
-        </Container>
-      </Section>
-
-      <Section tone="ink" aria-labelledby="sectors-heading">
-        <Container width="wide">
-          <Reveal>
-            <div className="max-w-3xl">
-              <p className="eyebrow text-brass">{sectorsIntro.eyebrow}</p>
-              <h2
-                id="sectors-heading"
-                className="mt-6 text-3xl leading-[1.12] sm:text-4xl lg:text-[2.9rem]"
-              >
-                <AccentText
-                  text="Four markets we know from the inside."
-                  accent="from the inside."
-                />
-              </h2>
-              <div className="mt-7 editorial">
-                <p>{sectorsIntro.paragraphs[0]}</p>
-              </div>
-            </div>
-          </Reveal>
-          <div className="mt-16 md:mt-20">
-            <SectorList tone="dark" />
-          </div>
-          <Reveal className="mt-14">
-            <ActionLink href="/sectors" variant="outlineLight">
-              Explore sector focus
             </ActionLink>
           </Reveal>
         </Container>

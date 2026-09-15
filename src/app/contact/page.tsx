@@ -8,7 +8,7 @@ import { contact, footer } from "@/content/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a confidential conversation with BABYOWL about the business you built. Every inquiry gets a reply.",
+    "Start a confidential conversation with BABYOWL — whether you own a business, advise someone who does, or are a family member or friend thinking about investing alongside us.",
   alternates: { canonical: "/contact" },
 };
 
@@ -17,8 +17,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Tell us about the business you built."
-        accent="you built."
+        title="Tell us about your business, or your site."
+        accent="or your site."
         lead="Confidential, no materials required, and no obligation to run a process. If we are not the right partner we will say so quickly."
       />
 
@@ -28,14 +28,16 @@ export default function ContactPage() {
             <Reveal>
               <h2 className="text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.14]">
                 <AccentText
-                  text="For owners, founders and their advisers."
-                  accent="and their advisers."
+                  text="For operators, landowners, advisers — and for our own circle."
+                  accent="and for our own circle."
                 />
               </h2>
               <div aria-hidden className="mt-8 h-px w-16 bg-brass" />
               <p className="mt-8 leading-relaxed text-graphite">
-                {contact.responseTime} If the business is a fit, the next step is
-                a single call — no data room, no teaser, no bankers required.
+                {contact.responseTime} If it is a fit, the next step is a single
+                call — no data room, no teaser, no agents required. Family and
+                friends thinking about investing alongside us should use the same
+                form; we will arrange a conversation rather than send a deck.
               </p>
 
               <dl className="mt-12 space-y-8">

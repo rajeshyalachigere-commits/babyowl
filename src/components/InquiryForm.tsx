@@ -1,42 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import { contact } from "@/content/site";
+import { contact, inquiryTypes } from "@/content/site";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-const fields = [
+const textFields = [
   {
     name: "name",
     label: "Your name",
     type: "text",
     autoComplete: "name",
-    required: true,
-  },
-  {
-    name: "company",
-    label: "Company",
-    type: "text",
-    autoComplete: "organization",
-    required: true,
   },
   {
     name: "email",
     label: "Email",
     type: "email",
     autoComplete: "email",
-    required: true,
   },
 ] as const;
 
 function buildMailto(values: Record<string, string>) {
-  const subject = `Inquiry from ${values.name || "a business owner"}${
+  const audience = inquiryTypes.find((t) => t.value === values.inquiryType);
+  const subject = `Inquiry from ${values.name || "the BABYOWL website"}${
     values.company ? ` — ${values.company}` : ""
   }`;
   const body = [
     `Name: ${values.name}`,
-    `Company: ${values.company}`,
     `Email: ${values.email}`,
+    ...(values.company ? [`Company: ${values.company}`] : []),
+    ...(audience ? [`Getting in touch as: ${audience.label}`] : []),
     "",
     values.message,
   ].join("\n");
@@ -49,11 +42,16 @@ function buildMailto(values: Record<string, string>) {
 export function InquiryForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [values, setValues] = useState({
+    inquiryType: inquiryTypes[0].value as string,
     name: "",
     company: "",
     email: "",
     message: "",
   });
+
+  const audience =
+    inquiryTypes.find((type) => type.value === values.inquiryType) ??
+    inquiryTypes[0];
 
   const inputClass =
     "mt-3 w-full border border-sand bg-cream px-4 py-3.5 text-ink placeholder:text-graphite/50 transition-colors duration-200 focus:border-brass focus:outline-none";
@@ -101,26 +99,50 @@ export function InquiryForm() {
   return (
     <form onSubmit={onSubmit} noValidate={false} className="border border-sand bg-cream p-6 md:p-10">
       <div className="grid gap-6 sm:grid-cols-2">
-        {fields.map((field) => (
-          <div
-            key={field.name}
-            className={field.name === "email" ? "sm:col-span-2" : ""}
+        <div className="sm:col-span-2">
+          <label htmlFor="inquiryType" className="eyebrow text-graphite">
+            You are getting in touch as
+            <span aria-hidden className="text-brass">
+              {" "}
+              *
+            </span>
+          </label>
+          <select
+            id="inquiryType"
+            name="inquiryType"
+            required
+            value={values.inquiryType}
+            onChange={(event) =>
+              setValues((current) => ({
+                ...current,
+                inquiryType: event.target.value,
+              }))
+            }
+            className={inputClass}
           >
+            {inquiryTypes.map((type) => (
+              <option key={type.value} value={type.value}>
+                {type.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {textFields.map((field) => (
+          <div key={field.name}>
             <label htmlFor={field.name} className="eyebrow text-graphite">
               {field.label}
-              {field.required ? (
-                <span aria-hidden className="text-brass">
-                  {" "}
-                  *
-                </span>
-              ) : null}
+              <span aria-hidden className="text-brass">
+                {" "}
+                *
+              </span>
             </label>
             <input
               id={field.name}
               name={field.name}
               type={field.type}
               autoComplete={field.autoComplete}
-              required={field.required}
+              required
               value={values[field.name]}
               onChange={(event) =>
                 setValues((current) => ({
@@ -134,8 +156,37 @@ export function InquiryForm() {
         ))}
 
         <div className="sm:col-span-2">
+          <label htmlFor="company" className="eyebrow text-graphite">
+            Company
+            {audience.wantsCompany ? (
+              <span aria-hidden className="text-brass">
+                {" "}
+                *
+              </span>
+            ) : (
+              <span className="text-graphite/60"> (optional)</span>
+            )}
+          </label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            autoComplete="organization"
+            required={audience.wantsCompany}
+            value={values.company}
+            onChange={(event) =>
+              setValues((current) => ({
+                ...current,
+                company: event.target.value,
+              }))
+            }
+            className={inputClass}
+          />
+        </div>
+
+        <div className="sm:col-span-2">
           <label htmlFor="message" className="eyebrow text-graphite">
-            About the business
+            {audience.prompt}
             <span aria-hidden className="text-brass">
               {" "}
               *
@@ -157,8 +208,7 @@ export function InquiryForm() {
             className={`${inputClass} resize-y`}
           />
           <p id="message-hint" className="mt-3 text-sm text-graphite">
-            What the company does, roughly how large it is, and what you are
-            hoping happens next. A paragraph is plenty.
+            {audience.hint}
           </p>
         </div>
       </div>
