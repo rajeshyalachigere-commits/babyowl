@@ -147,7 +147,7 @@ export default function HomePage() {
                 className="mt-6 text-3xl leading-[1.12] sm:text-4xl lg:text-[2.9rem]"
               >
                 <AccentText
-                  text="Four markets we know from the inside."
+                  text="Two focuses we know from the inside."
                   accent="from the inside."
                 />
               </h2>
@@ -161,7 +161,7 @@ export default function HomePage() {
           </div>
           <Reveal className="mt-14">
             <ActionLink href="/sectors" variant="outlineLight">
-              Explore sector focus
+              Explore where we invest
             </ActionLink>
           </Reveal>
         </Container>

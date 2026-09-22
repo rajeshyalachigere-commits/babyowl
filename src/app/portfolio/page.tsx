@@ -9,7 +9,7 @@ import { portfolioIntro } from "@/content/portfolio";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "The profile of businesses BABYOWL acquires and holds. Portfolio entries shown are illustrative placeholders, not completed transactions.",
+    "The profile of childcare franchise and shop real estate investments BABYOWL makes and holds. Entries shown are illustrative placeholders, not completed investments.",
   alternates: { canonical: "/portfolio" },
 };
 
@@ -29,14 +29,14 @@ export default function PortfolioPage() {
             <SectionHeading
               headingId="portfolio-heading"
               eyebrow="Holdings"
-              title="Built to be owned, not flipped."
+              title="Built to be held, not flipped."
               accent="not flipped."
             >
               <p>
-                Each of these businesses came from an owner who had a choice. We
-                keep the name on the building, keep the team that earned the
-                customer, and spend our time on the parts of the business that
-                compound.
+                Every operator here had a choice about whose money to take. We
+                keep their name on the door, leave the people who earned the
+                families and the customers exactly where they are, and spend our
+                time on the parts that compound.
               </p>
             </SectionHeading>
             <p
@@ -53,10 +53,10 @@ export default function PortfolioPage() {
       </Section>
 
       <ContactCta
-        eyebrow="Add your company"
+        eyebrow="Add yours"
         headline="The next one could be yours."
         accent="could be yours."
-        body="We acquire a small number of businesses each year. If yours fits the profile above, we would welcome a confidential conversation."
+        body="We make a small number of investments each year. If your centre, your platform or your site fits the profile above, we would welcome a confidential conversation."
       />
     </>
   );

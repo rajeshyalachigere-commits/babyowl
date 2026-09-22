@@ -8,7 +8,7 @@ import { contact, footer } from "@/content/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a confidential conversation with BABYOWL about the business you built. Every inquiry gets a reply.",
+    "Start a confidential conversation with BABYOWL about a childcare franchise or a shop site you are trying to build. Every inquiry gets a reply.",
   alternates: { canonical: "/contact" },
 };
 
@@ -17,9 +17,9 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Tell us about the business you built."
-        accent="you built."
-        lead="Confidential, no materials required, and no obligation to run a process. If we are not the right partner we will say so quickly."
+        title="Tell us what you are building."
+        accent="what you are building."
+        lead="Confidential, no materials required, and no obligation to run a process. If we are not the right capital for it we will say so quickly."
       />
 
       <Section tone="creamDeep">
@@ -28,14 +28,14 @@ export default function ContactPage() {
             <Reveal>
               <h2 className="text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.14]">
                 <AccentText
-                  text="For owners, founders and their advisers."
+                  text="For franchisees, developers and their advisers."
                   accent="and their advisers."
                 />
               </h2>
               <div aria-hidden className="mt-8 h-px w-16 bg-brass" />
               <p className="mt-8 leading-relaxed text-graphite">
-                {contact.responseTime} If the business is a fit, the next step is
-                a single call — no data room, no teaser, no bankers required.
+                {contact.responseTime} If it is a fit, the next step is a single
+                call — no data room, no teaser, no bankers required.
               </p>
 
               <dl className="mt-12 space-y-8">
