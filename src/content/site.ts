@@ -17,7 +17,7 @@ export const site = {
 } as const;
 
 export const contact = {
-  email: "Rajesh.Yalachigere@Gmail.com",
+  email: "contact@babyowlpartner.com",
   phone: "214-218-7040",
   city: "Coppell",
   region: "TX",
