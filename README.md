@@ -158,8 +158,8 @@ launch.
 
 - [x] `contact.email`, `contact.phone`, `contact.address`, `contact.city`,
       `contact.region`, `contact.postalCode` — real details are in place
-- [ ] `site.url` — currently `https://babyowl.example`; required for correct
-      canonical URLs, sitemap and OG tags
+- [x] `site.url` — production domain `https://babyowlpartner.com` is in place,
+      driving canonical URLs, sitemap and OG tags
 - [ ] `footer.disclaimer` — have counsel review the legal language
 
 **Investment mandate — `src/content/criteria.ts`**
