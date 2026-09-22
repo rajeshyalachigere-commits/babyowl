@@ -1,12 +1,18 @@
 # BABYOWL
 
-Marketing site for **BABYOWL**, a private investment firm that acquires and
-holds entrepreneur-owned businesses in the lower middle market.
+Marketing site for **BABYOWL**, a family and friends investment partnership
+that backs childcare franchises and develops the real estate that shops are
+built on.
 
-The site is an editorial, institutional single-purpose brochure: a thesis-led
-home page, the firm's operating principles, published investment criteria,
-sector focus, portfolio, and a confidential inquiry form for owners and their
-advisers.
+The site is an editorial, single-purpose brochure: a thesis-led home page, the
+firm's operating principles, published investment criteria, the two focus
+areas, a portfolio, and a confidential inquiry form for operators, developers
+and their advisers.
+
+> **Positioning note:** BABYOWL is an investor and franchise partner, **not a
+> childcare operator**. The site never offers enrolment, tours, programmes or
+> anything else implying we run a centre. Keep that line intact when editing
+> copy.
 
 > **Status:** the copy, financial ranges, portfolio entries and contact details
 > shipped here are editable defaults and placeholders. Work through the
@@ -47,7 +53,7 @@ src/
 │  ├─ page.tsx              home / thesis
 │  ├─ approach/             principles + process + quotes
 │  ├─ criteria/             investment criteria, anti-criteria, structures
-│  ├─ sectors/              four focus sectors
+│  ├─ sectors/              the two focus areas
 │  ├─ portfolio/            portfolio entries (placeholders)
 │  ├─ contact/              inquiry form + contact details
 │  ├─ api/inquiry/route.ts  stub inquiry endpoint
@@ -70,8 +76,8 @@ src/
    ├─ site.ts               brand, nav, contact details, footer/legal text
    ├─ home.ts               hero, thesis narrative, stats, closing CTA
    ├─ principles.ts         approach copy, six principles, process, quotes
-   ├─ criteria.ts           criteria groups, financial ranges, anti-criteria
-   ├─ sectors.ts            four sectors and their verticals
+   ├─ criteria.ts           criteria groups, cheque sizes, anti-criteria
+   ├─ sectors.ts            the two focus areas and their sub-categories
    └─ portfolio.ts          portfolio entries
 ```
 
@@ -159,14 +165,13 @@ launch.
 
 **Investment mandate — `src/content/criteria.ts`**
 
-- [ ] Revenue range (default `$10–75 million`)
-- [ ] EBITDA range (default `$2–15 million`)
-- [ ] Margin threshold (default `15%+`)
-- [ ] Transaction structures on `/criteria`, if the mandate differs
+- [ ] Equity cheque range (default `$500K–$5M`)
+- [ ] Shop real estate project size (default `$1M–$10M` of total cost)
+- [ ] Investment structures on `/criteria`, if the mandate differs
 
 **Firm claims — `src/content/home.ts`**
 
-- [ ] `stats` — intended hold period, acquisitions per year, target revenue
+- [ ] `stats` — intended hold period, focus count, capital source
 - [ ] `thesis.paragraphs` — the narrative is written to be credible but is not
       a factual account of the firm's history
 
@@ -187,5 +192,6 @@ launch.
 
 The visual language — cream and charcoal, serif headlines over a tracked-out
 sans, hairline rules instead of cards, generous vertical rhythm — follows the
-conventions of contemporary lower-middle-market private equity sites. The
-BABYOWL name, mark, palette, copy and portfolio are original to this project.
+conventions of contemporary investment-firm sites, warmed slightly to suit a
+family and friends partnership rather than an institution. The BABYOWL name,
+mark, palette, copy and portfolio are original to this project.
