@@ -14,9 +14,10 @@ and their advisers.
 > anything else implying we run a centre. Keep that line intact when editing
 > copy.
 
-> **Status:** the copy, financial ranges, portfolio entries and contact details
-> shipped here are editable defaults and placeholders. Work through the
-> [placeholders checklist](#placeholders-checklist) before this goes live.
+> **Status:** contact details are real. The copy, financial ranges and
+> portfolio entries shipped here are still editable defaults and placeholders.
+> Work through the [placeholders checklist](#placeholders-checklist) before
+> this goes live.
 
 ## Stack
 
@@ -155,12 +156,10 @@ launch.
 
 **Contact and identity — `src/content/site.ts`**
 
+- [x] `contact.email`, `contact.phone`, `contact.address`, `contact.city`,
+      `contact.region`, `contact.postalCode` — real details are in place
 - [ ] `site.url` — currently `https://babyowl.example`; required for correct
       canonical URLs, sitemap and OG tags
-- [ ] `contact.email` — currently `contact@babyowl.example`
-- [ ] `contact.phone` — currently `[Phone]`
-- [ ] `contact.city` / `contact.region` — currently `[City]`, `[State]`
-- [ ] `contact.address` — currently `[Street Address]`
 - [ ] `footer.disclaimer` — have counsel review the legal language
 
 **Investment mandate — `src/content/criteria.ts`**

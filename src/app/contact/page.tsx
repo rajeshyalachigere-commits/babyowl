@@ -59,7 +59,7 @@ export default function ContactPage() {
                   <dd className="mt-3 font-display text-xl">
                     {contact.address}
                     <br />
-                    {contact.city}, {contact.region}
+                    {contact.city}, {contact.region} {contact.postalCode}
                   </dd>
                 </div>
               </dl>

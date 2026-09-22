@@ -36,8 +36,15 @@ export function StructuredData() {
   if (!isPlaceholder(contact.city)) {
     schema.address = {
       "@type": "PostalAddress",
+      ...(isPlaceholder(contact.address)
+        ? {}
+        : { streetAddress: contact.address }),
       addressLocality: contact.city,
       addressRegion: contact.region,
+      ...(isPlaceholder(contact.postalCode)
+        ? {}
+        : { postalCode: contact.postalCode }),
+      addressCountry: "US",
     };
   }
 
