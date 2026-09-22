@@ -1,9 +1,9 @@
 /**
  * Global site, brand and contact content.
  *
- * Values wrapped in square brackets (e.g. "[Phone]") are intentional
- * placeholders. See the "Placeholders checklist" section of README.md
- * for everything that needs to be replaced before launch.
+ * Contact details below are real. Any remaining value wrapped in square
+ * brackets (e.g. "[Example]") is an intentional placeholder — see the
+ * "Placeholders checklist" section of README.md.
  */
 
 export const site = {
@@ -18,15 +18,12 @@ export const site = {
 } as const;
 
 export const contact = {
-  // PLACEHOLDER: replace with a real inbox.
-  email: "contact@babyowl.example",
-  // PLACEHOLDER: replace with a real phone number.
-  phone: "[Phone]",
-  // PLACEHOLDER: replace with the firm's headquarters city and state.
-  city: "[City]",
-  region: "[State]",
-  // PLACEHOLDER: replace with a real mailing address.
-  address: "[Street Address]",
+  email: "Rajesh.Yalachigere@Gmail.com",
+  phone: "214-218-7040",
+  city: "Coppell",
+  region: "TX",
+  postalCode: "75019",
+  address: "141 Bricknell Ln",
   responseTime: "We reply to every inquiry within two business days.",
 } as const;
 
