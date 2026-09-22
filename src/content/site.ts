@@ -9,9 +9,9 @@
 export const site = {
   name: "BABYOWL",
   legalName: "BABYOWL Partners",
-  tagline: "Patient capital for businesses built to last.",
+  tagline: "Family and friends capital, invested with patience.",
   description:
-    "BABYOWL is a private investment firm acquiring entrepreneur-owned businesses in the lower middle market. We are operators and investors who hold for decades, not quarters.",
+    "BABYOWL is a family and friends investment partnership. We back childcare franchises and develop the real estate that shops are built on, and we hold for decades rather than quarters.",
   // PLACEHOLDER: replace with the production domain before launch.
   url: "https://babyowl.example",
   locale: "en_US",
@@ -33,17 +33,17 @@ export const contact = {
 export const navigation = [
   { href: "/approach", label: "Approach" },
   { href: "/criteria", label: "Criteria" },
-  { href: "/sectors", label: "Sectors" },
+  { href: "/sectors", label: "Focus" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
 export const footer = {
   statement:
-    "BABYOWL acquires and holds a small number of exceptional lower-middle-market businesses. We are not a fund with a clock on it.",
+    "BABYOWL invests capital from our own family and a small circle of friends, in childcare franchises and in the real estate we develop into shop locations. We are not a fund with a clock on it.",
   disclaimer:
     "This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. Nothing herein should be construed as investment, legal, or tax advice.",
   // Shown until the portfolio content is replaced with real holdings.
   placeholderNotice:
-    "Portfolio entries shown on this site are illustrative placeholders, not completed transactions.",
+    "Portfolio entries shown on this site are illustrative placeholders, not completed investments. BABYOWL invests in childcare franchises and retail real estate; it does not operate childcare centres.",
 } as const;

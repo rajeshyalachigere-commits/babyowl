@@ -1,59 +1,63 @@
 export const criteriaIntro = {
   eyebrow: "Investment criteria",
-  headline: "The businesses we buy, and the ones we pass on.",
-  headlineAccent: "the ones we pass on.",
+  headline: "What we fund, and what we pass on.",
+  headlineAccent: "what we pass on.",
   paragraphs: [
-    "We are specific on purpose. A narrow mandate means we can give a clear answer fast, which is worth more to a busy owner than a polite maybe.",
-    "Treat the ranges below as a starting point rather than a gate. If a business is genuinely exceptional and sits just outside them, we would still like to hear about it.",
+    "We are specific on purpose. A narrow mandate means we can give a clear answer fast, which is worth more to a busy operator than a polite maybe.",
+    "Treat the ranges below as a starting point rather than a gate. If something sits just outside them and is genuinely good, we would still like to see it.",
   ],
 } as const;
 
 /**
- * PLACEHOLDER: the financial ranges below are editable defaults.
- * Update them to match the firm's actual mandate before launch.
+ * PLACEHOLDER: the cheque sizes and project ranges below are editable
+ * defaults. Update them to match the firm's actual mandate before launch.
  */
 export const criteriaGroups = [
   {
-    label: "Owners & founders",
+    label: "Partners & operators",
     items: [
-      "Built the business themselves, or stewarded it through a generation",
-      "Believe there is more to come, and want a partner to help get there",
-      "Sceptical of conventional private equity — often for good reason",
-      "Values-driven leaders who care what happens to their people after closing",
-      "Open to staying involved, or to handing over to a team they trust",
+      "Run the business day to day, rather than from a distance",
+      "Have opened at least one location and want to open the next",
+      "Want a patient partner more than they want the largest cheque in the room",
+      "Care what happens to their staff and their families after the money lands",
+      "Comfortable with an investor who asks questions and then gets out of the way",
+      "Equity commitments of roughly $500K–$5M, alongside the operator's own",
     ],
   },
   {
-    label: "Business fundamentals",
+    label: "Childcare franchises",
     items: [
-      "A recognised leader in a large, growing, fragmented market",
-      "Durable competitive edge from service quality, technical depth, or density",
-      "Revenue that repeats — contracts, subscriptions, or genuine customer loyalty",
-      "Clear unrealised potential through operations, pricing, or acquisition",
-      "A business we can explain to a stranger in two minutes",
+      "Established brands with a proven unit model and real franchisor support",
+      "Licensed, compliant, and well regarded by the families already enrolled",
+      "Unit economics that work before any assumed rate increase",
+      "Demonstrated demand in the catchment — waitlists, not projections",
+      "Multi-unit intent: a second or tenth centre, or a platform acquiring them",
+      "Educator pay and retention treated as a cost of quality, not a lever to squeeze",
     ],
   },
   {
-    label: "Financial profile",
+    label: "Shop real estate",
     items: [
-      "$10–75 million of revenue",
-      "$2–15 million of EBITDA",
-      "15%+ EBITDA margins, with a credible path to more",
-      "Modest capital intensity and predictable working capital",
-      "Majority recapitalisations, full buyouts, and succession transitions",
+      "Land or buildings we can acquire, develop or redevelop into shop space",
+      "Visibility, access and everyday traffic that existed before we arrived",
+      "Zoning and an entitlement path we can see all the way to the end of",
+      "Build costs that underwrite without a heroic assumption",
+      "Creditworthy tenants, often pre-leased, sometimes operators we already back",
+      "Total project costs of roughly $1M–$10M, single-tenant or small multi-tenant",
     ],
   },
 ] as const;
 
 export const antiCriteria = {
   eyebrow: "Not a fit",
-  headline: "Where we are the wrong buyer.",
-  headlineAccent: "the wrong buyer.",
+  headline: "Where we are the wrong partner.",
+  headlineAccent: "the wrong partner.",
   items: [
-    "Pre-revenue businesses, venture rounds, and minority growth equity",
+    "Running a childcare centre ourselves — we invest in franchises, we do not operate them",
+    "Pre-opening concepts with no operator, no licence and no track record",
+    "Speculative retail development with no tenant and no leasing plan",
     "Turnarounds, restructurings, and businesses in active distress",
-    "Heavy construction risk, project-based revenue, and single-customer concentration",
-    "Businesses that require a rapid exit to make the return work",
-    "Anything where the plan depends on cutting the team that built it",
+    "Anything outside childcare franchises and shop real estate",
+    "Deals that only work if somebody gets to exit quickly",
   ],
 } as const;

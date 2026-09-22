@@ -1,89 +1,89 @@
 export const portfolioIntro = {
   eyebrow: "Portfolio",
-  headline: "Businesses we intend to own for a very long time.",
+  headline: "Investments we intend to hold for a very long time.",
   headlineAccent: "for a very long time.",
   paragraphs: [
-    "We measure ourselves by whether these businesses are better run, better staffed and more durable than the day we bought them — not by how quickly we can sell them.",
+    "We measure ourselves by whether these businesses and buildings are better run, better staffed and more durable than the day we funded them — not by how quickly we could sell them.",
   ],
   /**
    * PLACEHOLDER NOTICE — keep this visible until real holdings replace the
    * illustrative entries below. See README.md "Placeholders checklist".
    */
   placeholderNotice:
-    "Illustrative placeholders. The companies below are examples of the profile we pursue and do not represent completed transactions.",
+    "Illustrative placeholders. The entries below are examples of the profile we pursue and do not represent completed investments.",
 } as const;
 
 /**
  * PLACEHOLDER: every entry below is fictional and exists only to show the
- * intended layout. Replace with real portfolio companies before launch, and
+ * intended layout. Replace with real portfolio entries before launch, and
  * remove `isPlaceholder` once an entry is genuine.
  */
 export const portfolio = [
   {
-    name: "Northwind Facility Group",
-    sector: "Essential Business Services",
+    name: "Morning Lane Early Learning",
+    sector: "Childcare Franchises",
     // PLACEHOLDER: replace with the real investment year.
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "A regional provider of contracted janitorial and building maintenance services to schools, clinics and light industrial sites.",
+      "A three-centre franchisee of a national early-learning brand, opening a fourth location in the same county.",
     detail:
-      "Founder-led for twenty-two years. The thesis is unglamorous: route density, disciplined pricing, and giving supervisors a career path so that crews stop turning over every nine months.",
+      "We funded the fourth site and the working capital to open it slowly rather than cheaply. The founders keep running the centres and hiring their own teachers; we stay out of the classroom entirely.",
   },
   {
-    name: "Cedar Line Veterinary Partners",
-    sector: "Multisite Consumer Services",
+    name: "Willow Bend Shops",
+    sector: "Shop Real Estate",
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "A group of general-practice veterinary clinics operating under their original local names.",
+      "A six-unit neighbourhood shop building developed on a vacant corner parcel beside an established grocery anchor.",
     detail:
-      "We keep the sign on the building and the doctor in the room. Central support absorbs scheduling, billing and hiring so clinicians can go back to practising medicine.",
+      "Land acquired, entitled and built out over two years. Four of the six units were pre-leased before the slab was poured, and rents are set to keep good tenants rather than to flatter an appraisal.",
   },
   {
-    name: "Meridian Testing & Inspection",
-    sector: "Essential Business Services",
+    name: "Kindercourt Franchise Partners",
+    sector: "Childcare Franchises",
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "Accredited materials testing and field inspection for infrastructure and commercial construction.",
+      "A platform acquiring owner-operated childcare franchises from founders heading toward retirement.",
     detail:
-      "A licence-and-reputation business where accreditation is the moat. Growth comes from adding certifications and technicians in adjacent metros, one at a time.",
+      "The founders wanted their staff and their enrolled families looked after. We provided the equity and the timetable; the platform provides the back office and leaves each centre director in place.",
   },
   {
-    name: "Halyard Managed Technology",
-    sector: "Technology-Enabled Services",
+    name: "Harbor Row Retail Land",
+    sector: "Shop Real Estate",
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "Managed IT and cybersecurity services for mid-sized professional-services firms.",
+      "Two adjacent parcels on a commuter corridor, held through entitlement for future shop development.",
     detail:
-      "Bought from two engineers who had built an excellent service organisation and a nonexistent sales function. The work is commercial discipline, not a rebuild.",
+      "Unglamorous work: rezoning, a traffic study and eighteen months of patience. Land is the one part of a shop that cannot be added later, which is why we buy it early.",
   },
   {
-    name: "Ashfield Rehabilitation Services",
-    sector: "Healthcare Services",
+    name: "Sunnyside Academy Group",
+    sector: "Childcare Franchises",
     year: "[Year]",
     status: "Current",
     isPlaceholder: true,
     summary:
-      "Outpatient physical therapy clinics serving suburban and small-city markets.",
+      "A four-centre franchise group in a growing suburban market, with a purpose-built fifth centre under construction.",
     detail:
-      "Clinician-owned and clinician-run. We fund new locations, take payer contracting and credentialing off the founders' desk, and leave the treatment model alone.",
+      "Both focuses meeting in a single investment: we backed the operator and separately developed the building they will occupy, on a long lease written to survive a slow first year.",
   },
   {
-    name: "Brightwater Home Services",
-    sector: "Multisite Consumer Services",
+    name: "Maple & Vine Shopfronts",
+    sector: "Shop Real Estate",
     year: "[Year]",
     status: "Realised",
     isPlaceholder: true,
     summary:
-      "Residential plumbing, HVAC and water treatment across a single metropolitan region.",
+      "A small redevelopment of three town-centre shopfronts, sold to the tenants who occupied them.",
     detail:
-      "Held while the second-generation family leadership took full control, then sold to that team. Not every good outcome is a sale to a stranger.",
+      "Held while the tenants grew into the space and could finance the purchase themselves. Not every good outcome is a sale to a stranger.",
   },
 ] as const;
