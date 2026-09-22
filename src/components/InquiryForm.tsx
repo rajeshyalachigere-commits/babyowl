@@ -15,7 +15,7 @@ const fields = [
   },
   {
     name: "company",
-    label: "Company",
+    label: "Company or project",
     type: "text",
     autoComplete: "organization",
     required: true,
@@ -30,7 +30,7 @@ const fields = [
 ] as const;
 
 function buildMailto(values: Record<string, string>) {
-  const subject = `Inquiry from ${values.name || "a business owner"}${
+  const subject = `Inquiry from ${values.name || "an operator"}${
     values.company ? ` — ${values.company}` : ""
   }`;
   const body = [
@@ -135,7 +135,7 @@ export function InquiryForm() {
 
         <div className="sm:col-span-2">
           <label htmlFor="message" className="eyebrow text-graphite">
-            About the business
+            What you are building
             <span aria-hidden className="text-brass">
               {" "}
               *
@@ -157,7 +157,7 @@ export function InquiryForm() {
             className={`${inputClass} resize-y`}
           />
           <p id="message-hint" className="mt-3 text-sm text-graphite">
-            What the company does, roughly how large it is, and what you are
+            The franchise or the site, roughly what it needs, and what you are
             hoping happens next. A paragraph is plenty.
           </p>
         </div>

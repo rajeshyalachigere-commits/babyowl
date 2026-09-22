@@ -3,35 +3,35 @@ export const approachIntro = {
   headline: "How we behave, written down.",
   headlineAccent: "written down.",
   paragraphs: [
-    "Every firm says it is different. The only useful test is what a firm does in the months after the wire clears — when the diligence questions are answered, the lawyers have gone home, and someone has to decide whether to keep the plant in a town that a spreadsheet says is inconvenient.",
-    "These are the principles we operate by. They are deliberately short, because we intend to be held to them.",
+    "Every investor says it is different. The only useful test is what happens in the months after the money lands — when a build runs late, a new centre fills slower than the model promised, and somebody has to decide whether to stay patient or start making demands.",
+    "These are the principles we operate by. They are deliberately short, because we intend to be held to them — by the operators we back and by the family and friends whose money this is.",
   ],
 } as const;
 
 export const principles = [
   {
-    title: "The money is the easy part.",
-    body: "Anyone can wire funds. We invest where we have operated, where we know which levers actually move, and where our presence changes the outcome rather than the cap table.",
+    title: "The money has names attached.",
+    body: "Our capital comes from our family and from friends we have known for years, not from a fund raised on a story. We invest it the way we would want ours invested: carefully, and only in things we can explain at a kitchen table.",
   },
   {
     title: "We are not on a clock.",
-    body: "No artificial hold period, no forced exit to clear a fund vintage. Every decision gets made on a twenty-year horizon, which changes almost all of them.",
+    body: "No vintage year, no forced exit, no artificial hold period. Every decision gets made on a twenty-year horizon, which quietly changes almost all of them.",
   },
   {
-    title: "A very high bar, held quietly.",
-    body: "We do not spread bets. We would rather do one thing well each year than five things adequately, and we are comfortable being wrong by omission.",
+    title: "Two focuses, held deliberately.",
+    body: "Childcare franchises, and the real estate we build shops on. Outside those two we are the wrong partner, and you will hear that on the first call rather than the fifth.",
+  },
+  {
+    title: "We invest; we do not run your centre.",
+    body: "We back franchisees and platforms and fund the buildings they need. The classroom, the roster and the relationships with families stay with the operators who earned them.",
   },
   {
     title: "Underpromise. Overdeliver.",
-    body: "We say what we will do and then do it, including the unglamorous parts. We look for owners and management teams with the same instinct.",
+    body: "We say what we will fund and then fund it, including the unglamorous parts — the permit that takes a year, the site work nobody put in the budget.",
   },
   {
     title: "The people came with the business.",
-    body: "Employees and customers are the reason the company is worth buying. We do not treat them as a line item to be optimised in the first hundred days.",
-  },
-  {
-    title: "We will do the unglamorous work.",
-    body: "Route density, hiring, a new phone system, a Saturday in a warehouse. If it is what the business needs, it is what we will help do.",
+    body: "Teachers, managers and tenants are the reason an investment works at all. They are not a line item to be optimised in the first hundred days.",
   },
 ] as const;
 
@@ -42,19 +42,19 @@ export const process = {
   steps: [
     {
       title: "A conversation",
-      body: "One call, no materials required. You tell us about the business and what you want to happen next. We tell you plainly whether we are a fit.",
+      body: "One call, no deck required. You tell us what you are building and what it needs. We tell you plainly whether we are the right capital for it.",
     },
     {
       title: "A written point of view",
-      body: "If there is interest on both sides, we come back with how we see the business, what we would pay, and what we would and would not change.",
+      body: "If there is interest on both sides, we come back with how we see it: what we would fund, on what terms, and what we would and would not change.",
     },
     {
       title: "Confirmatory diligence",
-      body: "Focused and finite. We ask for what we need to be confident, not for everything a checklist can imagine, and we protect your team's time.",
+      body: "Focused and finite. For a franchise, the unit economics and the operator. For a site, title, zoning and what it truly costs to build. We protect your team's time.",
     },
     {
-      title: "Close, then stay",
-      body: "We fund, we close, and then we are still there — in the business, at the pace the business needs, for as long as it takes.",
+      title: "Fund, then stay",
+      body: "We fund, we close, and then we are still there — through the ramp, the next unit, and the year that does not go to plan.",
     },
   ],
 } as const;
@@ -79,8 +79,8 @@ export const quotes = [
     author: "Dwight D. Eisenhower",
   },
   {
-    quote: "Chance favours the prepared mind.",
-    author: "Louis Pasteur",
+    quote: "The best time to plant a tree was twenty years ago.",
+    author: "Proverb",
   },
   {
     quote:

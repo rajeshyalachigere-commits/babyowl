@@ -19,8 +19,8 @@ export default function NotFound() {
           This page has been held for the long term. Elsewhere.
         </h1>
         <p className="mt-8 max-w-xl leading-relaxed text-ink-muted">
-          The address you followed does not exist. Everything about the firm,
-          our criteria and how to reach us is a click away.
+          The address you followed does not exist. Where we invest, what we look
+          for, and how to reach us are all a click away.
         </p>
         <div className="mt-12 flex flex-col gap-4 sm:flex-row">
           <ActionLink href="/" variant="outlineLight">

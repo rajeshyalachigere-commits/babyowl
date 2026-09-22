@@ -12,9 +12,9 @@ import { SectorList } from "@/components/sections/SectorList";
 import { sectorsIntro } from "@/content/sectors";
 
 export const metadata: Metadata = {
-  title: "Focus sectors",
+  title: "Focus areas",
   description:
-    "BABYOWL concentrates on essential business services, healthcare services, multisite consumer services, and technology-enabled services in the lower middle market.",
+    "BABYOWL invests in two areas: childcare franchises, and the real estate we acquire and develop into shop locations. We are an investor and franchise partner, not a childcare operator.",
   alternates: { canonical: "/sectors" },
 };
 
@@ -33,7 +33,7 @@ export default function SectorsPage() {
           <Reveal>
             <SectionHeading
               headingId="sectors-heading"
-              eyebrow="Four areas"
+              eyebrow="Two areas"
               title="Deep, not wide."
               accent="not wide."
             >
@@ -56,23 +56,24 @@ export default function SectorsPage() {
                 className="mt-6 text-[clamp(1.9rem,3.4vw,2.9rem)] leading-[1.12]"
               >
                 <AccentText
-                  text="We are buying the same business four different ways."
-                  accent="four different ways."
+                  text="Two focuses, underwritten the same way."
+                  accent="underwritten the same way."
                 />
               </h2>
             </Reveal>
             <Reveal delay={120} className="editorial">
               <p>
-                Across all four sectors we are looking for the same shape:
-                revenue that repeats, a customer who would notice if the service
-                stopped, and a market fragmented enough that being well run is
-                still a genuine advantage.
+                A childcare franchise and a shop building look nothing alike on
+                paper, and we underwrite both for the same thing: a local need
+                that will still be there in twenty years, an operator who takes
+                it seriously, and numbers that work without a heroic assumption.
               </p>
               <p>
-                We are less interested in growth that comes from a single
-                contract, a single channel, or a single hire. We would rather
-                own a business that grows a little every year for twenty years
-                than one that doubles once and then explains itself.
+                We are less interested in growth that depends on a single
+                contract, a single channel or a single hire. We would rather
+                back something that gets a little better every year for two
+                decades than something that doubles once and then explains
+                itself.
               </p>
             </Reveal>
           </div>
@@ -80,10 +81,10 @@ export default function SectorsPage() {
       </Section>
 
       <ContactCta
-        eyebrow="In one of these markets?"
+        eyebrow="In one of these two areas?"
         headline="We would like to hear from you early."
         accent="early."
-        body="Even years ahead of a transaction, a conversation with someone who knows your market is rarely wasted time."
+        body="Even a year or two ahead of the next centre or the next site, a conversation with someone who has funded one before is rarely wasted time."
       />
     </>
   );

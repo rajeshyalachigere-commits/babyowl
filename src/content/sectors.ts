@@ -1,64 +1,38 @@
 export const sectorsIntro = {
-  eyebrow: "Focus sectors",
-  headline: "Where our experience is worth something.",
-  headlineAccent: "worth something.",
+  eyebrow: "Focus areas",
+  headline: "Two places we put money, and no others.",
+  headlineAccent: "and no others.",
   paragraphs: [
-    "We concentrate where we have operated. In each of these markets we have run a business, fixed a business, or spent enough years around one to know which problems are real and which are noise.",
-    "Outside these four areas we are usually the wrong owner, and we will say so early.",
+    "We invest where we have spent real time and where the questions are ones we can answer honestly: childcare franchises, and the real estate we develop into shop locations.",
+    "Outside these two areas we are usually the wrong partner, and we will say so early.",
   ],
 } as const;
 
 export const sectors = [
   {
-    name: "Essential Business Services",
+    name: "Childcare Franchises",
     summary:
-      "Recurring, contracted services that a customer notices only when they stop.",
+      "Investments in franchisees and franchise platforms. We fund the operator and stand behind them; we do not run the centre.",
     verticals: [
-      "Facilities, janitorial & building services",
-      "Testing, inspection & certification",
-      "Industrial & specialty equipment distribution",
-      "Compliance, safety & risk advisory",
-      "Fleet, logistics support & last-mile services",
-      "Utility, telecom & infrastructure services",
+      "Single-unit franchisees opening a second and third location",
+      "Multi-unit platforms acquiring established centres",
+      "Franchise territory and development-agreement financing",
+      "Early learning and preschool franchise brands",
+      "After-school, enrichment and tutoring franchises",
+      "Succession for owner-operators inside an existing group",
     ],
   },
   {
-    name: "Healthcare Services",
+    name: "Shop Real Estate",
     summary:
-      "Outpatient and support businesses where clinical quality and throughput both matter.",
+      "Land and buildings we acquire and develop into shop locations for operators who need a good site, not another landlord.",
     verticals: [
-      "Outpatient rehabilitation & physical therapy",
-      "Vision, optometry & audiology",
-      "Diagnostics, imaging & laboratory support",
-      "Home health & hospice support services",
-      "Revenue cycle & practice administration",
-      "Medical & dental equipment service",
-    ],
-  },
-  {
-    name: "Multisite Consumer Services",
-    summary:
-      "Repeatable local businesses where unit economics and density drive the answer.",
-    verticals: [
-      "Veterinary & pet care services",
-      "Residential repair, HVAC, plumbing & pest",
-      "Specialty automotive aftermarket & collision",
-      "Trade, licensing & workforce skills training",
-      "Restoration & property remediation",
-      "Franchise platforms with committed operators",
-    ],
-  },
-  {
-    name: "Technology-Enabled Services",
-    summary:
-      "Software and services embedded deeply enough in a workflow to be hard to remove.",
-    verticals: [
-      "Vertical market & field service software",
-      "Managed IT & cybersecurity services",
-      "Data, analytics & reporting services",
-      "Payments, billing & workflow automation",
-      "Engineering, design & technical outsourcing",
-      "Regulated industry SaaS",
+      "Ground-up development of single-tenant shop buildings",
+      "Small neighbourhood retail rows and end-cap shop space",
+      "Build-to-suit sites for franchise and independent operators",
+      "Redevelopment of tired or vacant retail parcels",
+      "Land acquisition and entitlement for future shop sites",
+      "Purpose-built premises for the childcare operators we back",
     ],
   },
 ] as const;

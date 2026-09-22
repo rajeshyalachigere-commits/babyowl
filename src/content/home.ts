@@ -1,28 +1,28 @@
 export const hero = {
-  eyebrow: "Private Investment · Lower Middle Market",
-  headline: "Owners first. Capital second.",
+  eyebrow: "Family & Friends Capital · Childcare Franchises · Shop Real Estate",
+  headline: "Family capital, with nowhere else to be.",
   /** Rendered in italic accent type inside the headline. Must be a substring of it. */
-  headlineAccent: "Capital second.",
+  headlineAccent: "with nowhere else to be.",
   subhead:
-    "Long-term capital partnership for values-driven, entrepreneur-owned businesses — from people who have run them, not just funded them.",
+    "BABYOWL invests money that belongs to our family and our friends in two things we understand: childcare franchises, and the real estate we develop into shop locations.",
   primaryCta: { href: "/contact", label: "Start a conversation" },
   secondaryCta: { href: "/approach", label: "How we partner" },
 } as const;
 
 export const thesis = {
   eyebrow: "Our thesis",
-  headline: "A patient owner, on the same side of the table as the builder.",
-  headlineAccent: "on the same side of the table",
+  headline: "Capital that answers to people we know.",
+  headlineAccent: "to people we know.",
   /** Long-form narrative. Each string renders as its own paragraph. */
   paragraphs: [
-    "Capital is not scarce. A profitable company in a fragmented market can find a willing buyer in a fortnight, at a price that would have been unthinkable a generation ago. That is a genuinely good dynamic for an owner thinking about a sale — right up to the moment the money arrives attached to someone who is certain they understand the business better than the person who spent twenty years building it.",
-    "Owners know how fragile the real assets are. The product that actually works. The customer who answers the phone because of a relationship earned over a decade. The crew that stayed through a hard year. None of it appears on a balance sheet, and all of it can be spent in a single quarter by an owner optimising for an exit that was scheduled before the ink dried.",
-    "BABYOWL was founded to be the other option. We are operators and investors who have sat in the seat — hiring, firing, missing a covenant, making payroll in a bad month. We buy a small number of entrepreneur-owned businesses from owners who care what happens next, and then we hold them.",
-    "We are not raising a fund with a five-year clock. We do not need a story for a fundraising deck. We need a handful of durable businesses, run well, compounding quietly for a very long time. If that sounds like your company — or a company you know — we would like to hear the story.",
+    "Most investment capital arrives with a stranger attached to it — a committee, a vintage year, and a return that has to be delivered on a schedule someone set before they ever met you. That arrangement works well enough for large companies with professional finance teams. It works badly for a family that has built one good childcare centre and wants to build four, or for an operator who needs someone to put up a building rather than simply lease one out.",
+    "BABYOWL is funded differently. Our capital comes from our own family and from friends we have known for years — people who understand exactly what they are invested in, who are not waiting on a quarterly mark, and who would rather compound quietly than exit loudly. That single fact changes what we can offer an operator: time, a straight answer, and a partner who is still there in year ten.",
+    "We invest in two places. The first is childcare franchises. We back franchisees and franchise platforms, fund new units and territories, and stand behind the operators who run them. We are investors and partners, not a daycare operator — we do not enrol children or run classrooms, and we would be poor at both.",
+    "The second is the real estate underneath retail. We acquire land and buildings and develop them into shop locations for operators who need a good site more than they need another landlord. Both focuses reward the same discipline: careful underwriting, a long horizon, and money that is under no pressure to leave.",
   ],
   signature: {
     quote:
-      "The best outcome we can produce is a company that is stronger in twenty years than it is the day we buy it.",
+      "We invest money that belongs to people we will see at dinner. It makes us careful, and it makes us patient.",
     attribution: "BABYOWL Partners",
   },
 } as const;
@@ -35,16 +35,14 @@ export const stats = [
     detail: "We underwrite to permanence, not to a fund life.",
   },
   {
-    // PLACEHOLDER: adjust to reflect the firm's actual pace.
-    value: "1–2",
-    label: "Acquisitions per year",
-    detail: "A high bar, and the time to honour it.",
+    value: "Two",
+    label: "Areas of focus",
+    detail: "Childcare franchises and shop real estate. Nothing else.",
   },
   {
-    // PLACEHOLDER: adjust to reflect the firm's actual check size.
-    value: "$10–75M",
-    label: "Target revenue",
-    detail: "Profitable businesses in fragmented markets.",
+    value: "None",
+    label: "Outside fund investors",
+    detail: "The capital is our family's and our friends'.",
   },
   {
     value: "100%",
@@ -55,7 +53,7 @@ export const stats = [
 
 export const closing = {
   eyebrow: "No noise",
-  headline: "Tell us about the business you built.",
-  headlineAccent: "you built.",
-  body: "Every conversation is confidential, and most of them do not lead to a transaction. We still want to have them. If the fit is not there, we will tell you quickly and, where we can, point you somewhere better.",
+  headline: "Tell us what you are trying to build.",
+  headlineAccent: "what you are trying to build.",
+  body: "Your third childcare location, a platform buying centres from retiring owners, or a corner you need a shop built on — the first conversation is confidential and costs nothing. Most of them do not lead to an investment. We still want to have them.",
 } as const;

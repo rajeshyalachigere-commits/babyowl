@@ -14,7 +14,7 @@ import { antiCriteria, criteriaIntro } from "@/content/criteria";
 export const metadata: Metadata = {
   title: "Investment criteria",
   description:
-    "BABYOWL acquires profitable lower-middle-market businesses: $10–75 million of revenue, durable margins, fragmented markets, and owners who care what happens next.",
+    "What BABYOWL funds: childcare franchisees and franchise platforms with proven unit economics, and retail real estate we can acquire, entitle and develop into shop locations.",
   alternates: { canonical: "/criteria" },
 };
 
@@ -63,8 +63,8 @@ export default function CriteriaPage() {
               <div className="mt-7 editorial">
                 <p>
                   Saying no quickly is a courtesy, not a rejection. These are
-                  the situations where another buyer will serve you better, and
-                  we would rather tell you on the first call than the fifth.
+                  the situations where different capital will serve you better,
+                  and we would rather tell you on the first call than the fifth.
                 </p>
               </div>
             </Reveal>
@@ -90,23 +90,23 @@ export default function CriteriaPage() {
             <SectionHeading
               headingId="structure-heading"
               eyebrow="Structure"
-              title="How transactions usually come together."
+              title="How investments usually come together."
               accent="come together."
             />
           </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-12">
             {[
               {
-                title: "Full acquisition",
-                body: "The owner is ready to step back. We buy the business outright and work with existing leadership, or place a new operator alongside them.",
+                title: "Franchise growth equity",
+                body: "An operator is ready for the next unit or the next territory. We fund the build, the licensing and the working capital, and the operator keeps running the centres.",
               },
               {
-                title: "Majority recapitalisation",
-                body: "The owner takes meaningful liquidity now and keeps a real stake in what comes next, with governance written down before closing.",
+                title: "Platform investment",
+                body: "A management team is consolidating owner-operated franchises. We take a meaningful stake, with governance written down before anyone signs anything.",
               },
               {
-                title: "Succession transition",
-                body: "Leadership is changing hands internally. We provide the capital and the patience for a handover measured in years, not weeks.",
+                title: "Build-to-suit development",
+                body: "We acquire the land, carry the entitlement risk and develop the shop, then lease it long to the operator who needed it there in the first place.",
               },
             ].map((item, index) => (
               <Reveal
@@ -128,7 +128,7 @@ export default function CriteriaPage() {
         eyebrow="Not sure you fit?"
         headline="Send it anyway. We will tell you straight."
         accent="We will tell you straight."
-        body="If the business sits outside the ranges above but you think it is exceptional, we would still rather see it than miss it."
+        body="If it sits just outside the ranges above but you think it is exceptional, we would still rather see it than miss it."
       />
     </>
   );

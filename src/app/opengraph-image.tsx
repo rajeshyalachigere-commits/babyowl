@@ -55,7 +55,7 @@ export default function OpengraphImage() {
               maxWidth: 900,
             }}
           >
-            Owners first. Capital second.
+            Family capital, with nowhere else to be.
           </div>
           <div style={{ width: 96, height: 2, background: "#a8834f", marginTop: 36 }} />
           <div
@@ -67,8 +67,8 @@ export default function OpengraphImage() {
               maxWidth: 860,
             }}
           >
-            Long-term capital partnership for values-driven, entrepreneur-owned
-            businesses in the lower middle market.
+            A family and friends partnership backing childcare franchises and
+            the real estate we develop into shop locations.
           </div>
         </div>
       </div>

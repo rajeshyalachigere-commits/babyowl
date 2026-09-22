@@ -15,7 +15,7 @@ import { approachIntro, process, quotesIntro } from "@/content/principles";
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "The principles BABYOWL operates by, and what working with us actually looks like — from first conversation through closing and beyond.",
+    "The principles BABYOWL invests by as a family and friends partnership, and what working with us looks like — from first conversation through funding and the years after it.",
   alternates: { canonical: "/approach" },
 };
 
@@ -63,9 +63,9 @@ export default function ApproachPage() {
               </h2>
               <div aria-hidden className="mt-9 h-px w-16 bg-brass" />
               <p className="mt-9 max-w-sm leading-relaxed text-graphite">
-                Most owners we speak with are not running a process. They are
-                thinking about one. We are happy to be the first call, years
-                early.
+                Most operators we speak with are not running a process. They are
+                thinking about the next centre, or the corner they keep driving
+                past. We are happy to be the first call, years early.
               </p>
             </Reveal>
 
@@ -121,7 +121,7 @@ export default function ApproachPage() {
         eyebrow="Next step"
         headline="One conversation, no materials required."
         accent="no materials required."
-        body="If any of the above sounds like the partner you have been looking for, we would like to hear about the business you built."
+        body="If any of the above sounds like the partner you have been looking for, we would like to hear what you are building."
       />
     </>
   );
