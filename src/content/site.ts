@@ -12,7 +12,7 @@ export const site = {
   tagline: "Family and friends capital, invested with patience.",
   description:
     "OWLET is a family and friends investment partnership. We back childcare franchises and develop the real estate that shops are built on, and we hold for decades rather than quarters.",
-  url: "https://babyowlpartner.com",
+  url: "https://owletpartners.com",
   locale: "en_US",
 } as const;
 
