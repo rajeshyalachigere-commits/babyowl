@@ -17,7 +17,7 @@ export const site = {
 } as const;
 
 export const contact = {
-  email: "contact@babyowlpartner.com",
+  email: "contact@owletpartners.com",
   phone: "214-218-7040",
   city: "Coppell",
   region: "TX",
