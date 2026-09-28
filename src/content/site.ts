@@ -7,11 +7,11 @@
  */
 
 export const site = {
-  name: "BABYOWL",
-  legalName: "BABYOWL Partners",
+  name: "OWLET",
+  legalName: "OWLET Partners",
   tagline: "Family and friends capital, invested with patience.",
   description:
-    "BABYOWL is a family and friends investment partnership. We back childcare franchises and develop the real estate that shops are built on, and we hold for decades rather than quarters.",
+    "OWLET is a family and friends investment partnership. We back childcare franchises and develop the real estate that shops are built on, and we hold for decades rather than quarters.",
   url: "https://babyowlpartner.com",
   locale: "en_US",
 } as const;
@@ -36,10 +36,10 @@ export const navigation = [
 
 export const footer = {
   statement:
-    "BABYOWL invests capital from our own family and a small circle of friends, in childcare franchises and in the real estate we develop into shop locations. We are not a fund with a clock on it.",
+    "OWLET invests capital from our own family and a small circle of friends, in childcare franchises and in the real estate we develop into shop locations. We are not a fund with a clock on it.",
   disclaimer:
     "This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. Nothing herein should be construed as investment, legal, or tax advice.",
   // Shown until the portfolio content is replaced with real holdings.
   placeholderNotice:
-    "Portfolio entries shown on this site are illustrative placeholders, not completed investments. BABYOWL invests in childcare franchises and retail real estate; it does not operate childcare centres.",
+    "Portfolio entries shown on this site are illustrative placeholders, not completed investments. OWLET invests in childcare franchises and retail real estate; it does not operate childcare centres.",
 } as const;

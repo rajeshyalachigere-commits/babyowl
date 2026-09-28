@@ -4,7 +4,7 @@ type OwlMarkProps = {
 };
 
 /**
- * BABYOWL brand mark: a geometric, monoline owl head. Intentionally angular
+ * OWLET brand mark: a geometric, monoline owl head. Intentionally angular
  * and institutional rather than illustrative. Inherits `currentColor`.
  */
 export function OwlMark({ className, title }: OwlMarkProps) {

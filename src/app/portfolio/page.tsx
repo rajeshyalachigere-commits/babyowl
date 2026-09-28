@@ -9,7 +9,7 @@ import { portfolioIntro } from "@/content/portfolio";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "The profile of childcare franchise and shop real estate investments BABYOWL makes and holds. Entries shown are illustrative placeholders, not completed investments.",
+    "The profile of childcare franchise and shop real estate investments OWLET makes and holds. Entries shown are illustrative placeholders, not completed investments.",
   alternates: { canonical: "/portfolio" },
 };
 

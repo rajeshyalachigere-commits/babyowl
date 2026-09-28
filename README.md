@@ -1,6 +1,6 @@
-# BABYOWL
+# OWLET
 
-Marketing site for **BABYOWL**, a family and friends investment partnership
+Marketing site for **OWLET**, a family and friends investment partnership
 that backs childcare franchises and develops the real estate that shops are
 built on.
 
@@ -9,7 +9,7 @@ firm's operating principles, published investment criteria, the two focus
 areas, a portfolio, and a confidential inquiry form for operators, developers
 and their advisers.
 
-> **Positioning note:** BABYOWL is an investor and franchise partner, **not a
+> **Positioning note:** OWLET is an investor and franchise partner, **not a
 > childcare operator**. The site never offers enrolment, tours, programmes or
 > anything else implying we run a centre. Keep that line intact when editing
 > copy.
@@ -192,5 +192,5 @@ launch.
 The visual language — cream and charcoal, serif headlines over a tracked-out
 sans, hairline rules instead of cards, generous vertical rhythm — follows the
 conventions of contemporary investment-firm sites, warmed slightly to suit a
-family and friends partnership rather than an institution. The BABYOWL name,
+family and friends partnership rather than an institution. The OWLET name,
 mark, palette, copy and portfolio are original to this project.
