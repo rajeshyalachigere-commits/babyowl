@@ -20,6 +20,7 @@ export function PageHero({
       />
       <OwlMark
         aria-hidden
+        animationDelayMs={4100}
         className="pointer-events-none absolute -top-16 -right-16 -z-10 h-72 w-72 text-brass/8 md:h-[28rem] md:w-[28rem]"
       />
       <Container width="wide" className="pt-36 pb-20 md:pt-48 md:pb-28">

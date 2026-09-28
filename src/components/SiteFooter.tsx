@@ -12,7 +12,7 @@ export function SiteFooter() {
         <div className="grid gap-14 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-3">
-              <OwlMark className="h-9 w-9 text-brass" />
+              <OwlMark animated={false} className="h-9 w-9 text-brass" />
               <span className="eyebrow text-[0.9rem] tracking-[0.28em]">
                 {site.name}
               </span>
