@@ -15,7 +15,7 @@ import { approachIntro, process, quotesIntro } from "@/content/principles";
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "The principles BABYOWL invests by as a family and friends partnership, and what working with us looks like — from first conversation through funding and the years after it.",
+    "The principles OWLET invests by as a family and friends partnership, and what working with us looks like — from first conversation through funding and the years after it.",
   alternates: { canonical: "/approach" },
 };
 

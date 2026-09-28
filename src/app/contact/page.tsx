@@ -8,7 +8,7 @@ import { contact, footer } from "@/content/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a confidential conversation with BABYOWL about a childcare franchise or a shop site you are trying to build. Every inquiry gets a reply.",
+    "Start a confidential conversation with OWLET about a childcare franchise or a shop site you are trying to build. Every inquiry gets a reply.",
   alternates: { canonical: "/contact" },
 };
 

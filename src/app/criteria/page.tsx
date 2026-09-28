@@ -14,7 +14,7 @@ import { antiCriteria, criteriaIntro } from "@/content/criteria";
 export const metadata: Metadata = {
   title: "Investment criteria",
   description:
-    "What BABYOWL funds: childcare franchisees and franchise platforms with proven unit economics, and retail real estate we can acquire, entitle and develop into shop locations.",
+    "What OWLET funds: childcare franchisees and franchise platforms with proven unit economics, and retail real estate we can acquire, entitle and develop into shop locations.",
   alternates: { canonical: "/criteria" },
 };
 

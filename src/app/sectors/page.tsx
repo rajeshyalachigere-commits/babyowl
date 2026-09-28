@@ -14,7 +14,7 @@ import { sectorsIntro } from "@/content/sectors";
 export const metadata: Metadata = {
   title: "Focus areas",
   description:
-    "BABYOWL invests in two areas: childcare franchises, and the real estate we acquire and develop into shop locations. We are an investor and franchise partner, not a childcare operator.",
+    "OWLET invests in two areas: childcare franchises, and the real estate we acquire and develop into shop locations. We are an investor and franchise partner, not a childcare operator.",
   alternates: { canonical: "/sectors" },
 };
 
