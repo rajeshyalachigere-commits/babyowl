@@ -104,6 +104,125 @@
   .on-ink .editorial > p {
     color: var(--color-ink-muted);
   }
+
+  /* Brand mark: slow eye glance with an occasional blink. */
+  .owl-mark__eyes,
+  .owl-mark__pupils {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  .owl-mark--animated .owl-mark__pupils {
+    animation-name: owl-glance;
+    animation-duration: 7.5s;
+    animation-timing-function: cubic-bezier(0.33, 0, 0.2, 1);
+    animation-iteration-count: infinite;
+    animation-delay: var(--owl-delay, 0s);
+  }
+
+  .owl-mark--animated .owl-mark__eyes {
+    animation-name: owl-blink;
+    animation-duration: 7.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: var(--owl-delay, 0s);
+  }
+
+  /* Hovering or focusing the header logo plays one short glance and blink. */
+  .owl-glance-trigger:focus-visible .owl-mark--animated .owl-mark__pupils {
+    animation-name: owl-glance-once;
+    animation-duration: 1.4s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+  }
+
+  .owl-glance-trigger:focus-visible .owl-mark--animated .owl-mark__eyes {
+    animation-name: owl-blink-once;
+    animation-duration: 1.4s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+  }
+
+  @media (hover: hover) {
+    .owl-glance-trigger:hover .owl-mark--animated .owl-mark__pupils {
+      animation-name: owl-glance-once;
+      animation-duration: 1.4s;
+      animation-iteration-count: 1;
+      animation-delay: 0s;
+    }
+
+    .owl-glance-trigger:hover .owl-mark--animated .owl-mark__eyes {
+      animation-name: owl-blink-once;
+      animation-duration: 1.4s;
+      animation-iteration-count: 1;
+      animation-delay: 0s;
+    }
+  }
+}
+
+@keyframes owl-glance {
+  0%,
+  12% {
+    transform: translateX(0);
+  }
+  17%,
+  25% {
+    transform: translateX(-1.15px);
+  }
+  30%,
+  44% {
+    transform: translateX(0);
+  }
+  49%,
+  57% {
+    transform: translateX(1.15px);
+  }
+  62%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes owl-blink {
+  0%,
+  80% {
+    transform: scaleY(1);
+  }
+  81% {
+    transform: scaleY(0.14);
+  }
+  82%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes owl-glance-once {
+  0% {
+    transform: translateX(0);
+  }
+  20%,
+  42% {
+    transform: translateX(-1.15px);
+  }
+  64%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes owl-blink-once {
+  0%,
+  74% {
+    transform: scaleY(1);
+  }
+  79% {
+    transform: scaleY(0.14);
+  }
+  84%,
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 @layer utilities {
@@ -133,6 +252,12 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .owl-mark__eyes,
+  .owl-mark__pupils {
+    animation: none !important;
+    transform: none !important;
   }
 
   *,

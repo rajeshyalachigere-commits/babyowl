@@ -50,7 +50,7 @@ export function SiteHeader() {
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
-          className="group flex items-center gap-3"
+          className="owl-glance-trigger group flex items-center gap-3"
           aria-label={`${site.name} — home`}
         >
           <OwlMark className="h-8 w-8 text-brass transition-colors duration-300 group-hover:text-cream md:h-9 md:w-9" />

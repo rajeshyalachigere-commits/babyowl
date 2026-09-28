@@ -15,6 +15,7 @@ export function HomeHero() {
       />
       <OwlMark
         aria-hidden
+        animationDelayMs={2600}
         className="pointer-events-none absolute -right-24 -bottom-24 -z-10 h-[22rem] w-[22rem] text-brass/5 sm:-right-16 sm:-bottom-10 sm:h-[34rem] sm:w-[34rem] sm:text-brass/8 md:-right-24 md:h-[42rem] md:w-[42rem]"
       />
 
