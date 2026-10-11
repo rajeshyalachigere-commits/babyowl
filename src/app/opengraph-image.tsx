@@ -40,6 +40,7 @@ export default function OpengraphImage() {
               fontSize: 30,
               letterSpacing: 10,
               color: "#f7f4ed",
+              textTransform: "uppercase",
             }}
           >
             {site.name}

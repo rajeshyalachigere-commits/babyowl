@@ -10,7 +10,7 @@ type OwlMarkProps = {
 };
 
 /**
- * OWLET brand mark: a geometric, monoline owl head. Intentionally angular
+ * OWLET Partners brand mark: a geometric, monoline owl head. Intentionally angular
  * and institutional rather than illustrative. Inherits `currentColor`.
  */
 export function OwlMark({

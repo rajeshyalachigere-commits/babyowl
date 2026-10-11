@@ -11,7 +11,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.legalName,
-    alternateName: site.name,
+    alternateName: site.shortName,
     url: site.url,
     description: site.description,
     logo: new URL("/icon.svg", site.url).toString(),
