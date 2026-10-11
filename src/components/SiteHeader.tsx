@@ -54,12 +54,17 @@ export function SiteHeader() {
           aria-label={`${site.name} — home`}
         >
           <OwlMark className="h-8 w-8 text-brass transition-colors duration-300 group-hover:text-cream md:h-9 md:w-9" />
-          <span className="eyebrow text-[0.8rem] tracking-[0.28em] md:text-[0.9rem]">
+          {/* Tracking and size step down on narrow widths so the two-word
+              wordmark stays on one line beside the menu button and nav. */}
+          <span className="eyebrow whitespace-nowrap text-[0.7rem] tracking-[0.16em] min-[360px]:text-[0.8rem] min-[360px]:tracking-[0.22em] md:text-[0.85rem] lg:text-[0.9rem] lg:tracking-[0.26em]">
             {site.name}
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-9 md:flex">
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-6 md:flex lg:gap-9"
+        >
           {navigation.map((item) => {
             const active = pathname === item.href;
             return (

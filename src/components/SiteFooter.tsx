@@ -13,7 +13,7 @@ export function SiteFooter() {
           <div>
             <Link href="/" className="flex items-center gap-3">
               <OwlMark animated={false} className="h-9 w-9 text-brass" />
-              <span className="eyebrow text-[0.9rem] tracking-[0.28em]">
+              <span className="eyebrow whitespace-nowrap text-[0.8rem] tracking-[0.22em] lg:text-[0.9rem] lg:tracking-[0.26em]">
                 {site.name}
               </span>
             </Link>
