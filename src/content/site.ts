@@ -21,10 +21,8 @@ export const site = {
 export const contact = {
   email: "contact@owletpartners.com",
   phone: "214-218-7040",
-  city: "Coppell",
+  city: "Dallas",
   region: "TX",
-  postalCode: "75019",
-  address: "141 Bricknell Ln",
   responseTime: "We reply to every inquiry within two business days.",
 } as const;
 
