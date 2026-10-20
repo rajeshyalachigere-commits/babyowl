@@ -57,9 +57,7 @@ export default function ContactPage() {
                 <div className="border-t border-sand pt-6">
                   <dt className="eyebrow text-graphite/70">Office</dt>
                   <dd className="mt-3 font-display text-xl">
-                    {contact.address}
-                    <br />
-                    {contact.city}, {contact.region} {contact.postalCode}
+                    {contact.city}, {contact.region}
                   </dd>
                 </div>
               </dl>
